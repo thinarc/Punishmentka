@@ -1,3 +1,4 @@
+using _Project.Scripts.Interactive;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,8 @@ namespace _Project.Scripts.EntryPoints
     {
         private void Start()
         {
+            InterItem.Stayed = null;
+            DontDestroyOnLoad(this);
             SceneManager.LoadScene(1);
         }
     }

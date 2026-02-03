@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace _Project.Scripts.Interactive
@@ -19,10 +20,14 @@ namespace _Project.Scripts.Interactive
         private static readonly int Interact = Animator.StringToHash("Interact");
 
         private bool _used;
+        public event Action<InterItem> Used;
+
+        [Header("Extra")]
+        [SerializeField] private bool realFantasy;
+        [SerializeField] private ItemView uiView;
 
         private void Start()
         {
-            Stayed = null;
             _sprite = GetComponent<SpriteRenderer>();
             _anim = GetComponent<Animator>();
             
@@ -38,10 +43,13 @@ namespace _Project.Scripts.Interactive
         private void Update()
         {
             if (_used) _selected = _def;
+            if (_used) _selectedS = _def;
         }
         
         private void OnTriggerEnter2D(Collider2D other)
         {
+            if (!enabled) return;
+            
             if (!other.CompareTag("Player")) return;
             if (oneshot && _used) return;
             Stayed = this;
@@ -50,14 +58,25 @@ namespace _Project.Scripts.Interactive
         
         private void OnTriggerExit2D(Collider2D other)
         {
+            if (!enabled) return;
+            
             if (!other.CompareTag("Player")) return;
             _sprite.material = _selected;
+            if (_used && oneshot) _sprite.material = _def;
         }
         
         private void OnTriggerStay2D(Collider2D other)
         {
+            if (!enabled) return;
+            
             if (!other.CompareTag("Player")) return;
-            if (oneshot && _used) return;
+            if (oneshot && _used)
+            {
+                GetComponent<Collider2D>().enabled = false;
+                _sprite.material = _def;
+                enabled = false;
+                return;
+            }
 
             if (Stayed != this || _sprite.material == _selectedS)
             {
@@ -69,8 +88,11 @@ namespace _Project.Scripts.Interactive
             if (!Input.GetKey(KeyCode.F)) return;
             _anim.SetTrigger(Interact);
             _sprite.material = _def;
-            Stayed = null;
             _used = true;
+            Used?.Invoke(this);
+            if (realFantasy) SoundManager.instance.PlayClip(Resources.Load<AudioClip>("RealFantasy"));
         }
+
+        public void KeySeeUI() => uiView.SeeView();
     }
 }
