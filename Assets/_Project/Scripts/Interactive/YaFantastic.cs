@@ -24,7 +24,7 @@ namespace _Project.Scripts.Interactive
             else
             {
                 await UniTask.Delay(2940);
-                FindAnyObjectByType<GameEntryPoint>().ChangeLight(0.44f);
+                FindAnyObjectByType<GameEntryPoint>().ChangeLight(0.62f);
             }
             _anim.SetTrigger(Shine);
         }

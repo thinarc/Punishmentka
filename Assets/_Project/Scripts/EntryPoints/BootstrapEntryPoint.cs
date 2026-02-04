@@ -9,6 +9,7 @@ namespace _Project.Scripts.EntryPoints
         private void Start()
         {
             InterItem.Stayed = null;
+            InterItem.Stayed2 = null;
             DontDestroyOnLoad(this);
             SceneManager.LoadScene(1);
         }

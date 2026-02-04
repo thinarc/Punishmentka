@@ -13,11 +13,18 @@ namespace _Project.Scripts.Interactive
         private Material _selected;
         private Material _selectedS;
         private Material _def;
-
+        
         private SpriteRenderer _sprite;
+        private SpriteRenderer Sprite
+        {
+            set => _sprite = value;
+            get { return appliedSprite == null ? _sprite : appliedSprite; }
+        }
+        [SerializeField] private SpriteRenderer appliedSprite;
         private Animator _anim;
 
         public static InterItem Stayed;
+        public static InterItem Stayed2;
         private static readonly int Interact = Animator.StringToHash("Interact");
 
         private bool _used;
@@ -31,7 +38,7 @@ namespace _Project.Scripts.Interactive
 
         private void Start()
         {
-            _sprite = GetComponent<SpriteRenderer>();
+            Sprite = GetComponent<SpriteRenderer>();
             _anim = GetComponent<Animator>();
             
             _selected = Resources.Load<Material>("Outline");
@@ -40,7 +47,7 @@ namespace _Project.Scripts.Interactive
             if (extra != null) _selected = extra;
             if (extraS != null) _selectedS = extraS;
             
-            _sprite.material = _selected;
+            Sprite.material = _selected;
         }
         
         private void Update()
@@ -48,22 +55,33 @@ namespace _Project.Scripts.Interactive
             if (_used) _selected = _def;
             if (_used) _selectedS = _def;
         }
+
+        private bool enter;
         
         private void OnTriggerEnter2D(Collider2D other)
         {
+            if (enter) return;
+            enter = true;
             if (!enabled) return;
             
             if (!other.CompareTag("Player")) return;
             if (oneshot && _used) return;
+            if (Stayed != null) Stayed2 = Stayed;
             Stayed = this;
         }
         
         private void OnTriggerExit2D(Collider2D other)
         {
+            if (!enter) return;
+            enter = false;
             if (!enabled) return;
             
             if (!other.CompareTag("Player")) return;
-            _sprite.material = _selected;
+            Sprite.material = _selected;
+            if (Stayed == this) Stayed = null;
+            if (Stayed2 == this) Stayed2 = null;
+            else if (Stayed2 != null) Stayed = Stayed2;
+            Stayed2 = null;
         }
         
         private void OnTriggerStay2D(Collider2D other)
@@ -80,14 +98,14 @@ namespace _Project.Scripts.Interactive
 
             if (Stayed != this)
             {
-                _sprite.material = _selected;
+                Sprite.material = _selected;
                 return;
             }
-            _sprite.material = _selectedS;
+            Sprite.material = _selectedS;
             
             if (!InteractButton.Instance.Interact) return;
             _anim.SetTrigger(Interact);
-            _sprite.material = _def;
+            Sprite.material = _def;
             _used = true;
             Used?.Invoke(this);
             FindAnyObjectByType<PlayerMovement>().ResetTarget();

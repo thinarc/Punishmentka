@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
 namespace _Project.Scripts.EntryPoints
@@ -10,6 +12,9 @@ namespace _Project.Scripts.EntryPoints
     {
         [SerializeField] private Light2D[] globals;
         private float _targetIntensity;
+
+        [SerializeField, Space(5)] private VolumeProfile[] profiles;
+        [SerializeField] private Volume volumeCamera;
         
         [SerializeField, Space(5)] private List<SceneState> states;
 
@@ -32,11 +37,14 @@ namespace _Project.Scripts.EntryPoints
             ChangeLight(_targetIntensity);
         }
         
-        public void ChangeLight(float intensity)
+        public async void ChangeLight(float intensity)
         {
+            _targetIntensity = intensity;
             if (Mathf.Approximately(globals[0].intensity, intensity)) return;
-            globals[0].intensity = Mathf.MoveTowards(globals[0].intensity, intensity, Time.deltaTime);
-            globals[1].intensity = Mathf.MoveTowards(globals[1].intensity, intensity, Time.deltaTime);
+            globals[0].intensity = Mathf.MoveTowards(globals[0].intensity, intensity, Time.deltaTime / 40f);
+            globals[1].intensity = Mathf.MoveTowards(globals[1].intensity, intensity, Time.deltaTime / 40f);
+            await UniTask.Delay(3200);
+            volumeCamera.profile = profiles[2];
         }
         
         private void OnValidate()
@@ -65,7 +73,21 @@ namespace _Project.Scripts.EntryPoints
                 _lastOnStart = 0;
             }
             
-            states.ForEach(s => s.scene.SetActive(s.onStart));
+            states.ForEach(s =>
+            {
+                s.scene.SetActive(false);
+                if (!s.onStart) return;
+                
+                s.scene.SetActive(true);
+                var vol = s.scene.name switch
+                {
+                    "Home" => 0,
+                    "Fantasy" => 1,
+                    "Final" => 3,
+                    _ => -100
+                };
+                volumeCamera.profile = profiles[vol];
+            });
         }
     }
 
