@@ -1,4 +1,5 @@
 using System;
+using _Project.Scripts.Player;
 using UnityEngine;
 
 namespace _Project.Scripts.Interactive
@@ -25,6 +26,8 @@ namespace _Project.Scripts.Interactive
         [Header("Extra")]
         [SerializeField] private bool realFantasy;
         [SerializeField] private ItemView uiView;
+
+        public static event Action doFantasyy;
 
         private void Start()
         {
@@ -53,7 +56,6 @@ namespace _Project.Scripts.Interactive
             if (!other.CompareTag("Player")) return;
             if (oneshot && _used) return;
             Stayed = this;
-            _sprite.material = _selectedS;
         }
         
         private void OnTriggerExit2D(Collider2D other)
@@ -62,7 +64,6 @@ namespace _Project.Scripts.Interactive
             
             if (!other.CompareTag("Player")) return;
             _sprite.material = _selected;
-            if (_used && oneshot) _sprite.material = _def;
         }
         
         private void OnTriggerStay2D(Collider2D other)
@@ -73,24 +74,30 @@ namespace _Project.Scripts.Interactive
             if (oneshot && _used)
             {
                 GetComponent<Collider2D>().enabled = false;
-                _sprite.material = _def;
                 enabled = false;
                 return;
             }
 
-            if (Stayed != this || _sprite.material == _selectedS)
+            if (Stayed != this)
             {
                 _sprite.material = _selected;
                 return;
             }
+            _sprite.material = _selectedS;
             
-            _anim.ResetTrigger(Interact);
-            if (!Input.GetKey(KeyCode.F)) return;
+            if (!InteractButton.Instance.Interact) return;
             _anim.SetTrigger(Interact);
             _sprite.material = _def;
             _used = true;
             Used?.Invoke(this);
-            if (realFantasy) SoundManager.instance.PlayClip(Resources.Load<AudioClip>("RealFantasy"));
+            FindAnyObjectByType<PlayerMovement>().ResetTarget();
+            if (realFantasy) DoFantasy();
+        }
+
+        private void DoFantasy()
+        {
+            SoundManager.instance.PlayClip(Resources.Load<AudioClip>("RealFantasy"));
+            doFantasyy?.Invoke();
         }
 
         public void KeySeeUI() => uiView.SeeView();

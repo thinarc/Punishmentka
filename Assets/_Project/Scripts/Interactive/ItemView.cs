@@ -32,7 +32,7 @@ namespace _Project.Scripts.Interactive
                 buttonForActivateSecondItem.blocksRaycasts = false;
                 buttonForActivateSecondItem.DOFade(0f, 0.4f).SetEase(Ease.InSine).SetUpdate(true).OnComplete(() =>
                 {
-                    secondItem.DOFade(1f, 0.4f).SetEase(Ease.OutSine).SetDelay(0.2f).SetUpdate(true);
+                    secondItem.DOFade(1f, 0.4f).SetEase(Ease.OutSine).SetDelay(0.176f).SetUpdate(true);
                 });
             });
         }
@@ -41,9 +41,8 @@ namespace _Project.Scripts.Interactive
         {
             Time.timeScale = 1f;
             var g = GetComponent<CanvasGroup>();
-            g.blocksRaycasts = false;
             g.interactable = false;
-            g.DOFade(0f, 0.4f).SetEase(Ease.InSine);
+            g.DOFade(0f, 0.4f).SetEase(Ease.InSine).OnComplete(() => g.blocksRaycasts = false);
             
             if (!secondItem) return;
             secondItem.DOFade(0f, 0.4f).SetEase(Ease.InSine);

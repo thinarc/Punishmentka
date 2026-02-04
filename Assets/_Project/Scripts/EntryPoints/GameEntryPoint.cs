@@ -1,15 +1,44 @@
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 namespace _Project.Scripts.EntryPoints
 {
     [ExecuteInEditMode]
     public class GameEntryPoint : MonoBehaviour
     {
-        [SerializeField] private List<SceneState> states;
+        [SerializeField] private Light2D[] globals;
+        private float _targetIntensity;
+        
+        [SerializeField, Space(5)] private List<SceneState> states;
 
         private int _lastOnStart = -100;
+
+        private void Start()
+        {
+            _targetIntensity = globals[0].intensity;
+            
+            if (!Application.isPlaying) return;
+            states.ForEach(s =>
+            {
+                if (s.onStart) SoundManager.instance.PlayClip(s.sound);
+            });
+        }
+
+        private void Update()
+        {
+            if (!Application.isPlaying) return;
+            ChangeLight(_targetIntensity);
+        }
+        
+        public void ChangeLight(float intensity)
+        {
+            if (Mathf.Approximately(globals[0].intensity, intensity)) return;
+            globals[0].intensity = Mathf.MoveTowards(globals[0].intensity, intensity, Time.deltaTime);
+            globals[1].intensity = Mathf.MoveTowards(globals[1].intensity, intensity, Time.deltaTime);
+        }
+        
         private void OnValidate()
         {
             if (states.Count == 0 || states[0].scene == null)
@@ -37,16 +66,6 @@ namespace _Project.Scripts.EntryPoints
             }
             
             states.ForEach(s => s.scene.SetActive(s.onStart));
-        }
-
-        private void Start()
-        {
-            if (!Application.isPlaying) return;
-            states.ForEach(s =>
-            {
-                if (s.onStart) SoundManager.instance.PlayClip(s.sound);
-            });
-            
         }
     }
 
