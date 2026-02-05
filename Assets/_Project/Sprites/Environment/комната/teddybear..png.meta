@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dd3120e5911886c4ca749e609bd19573
+guid: a25321f2f1eb50346b20767533d02cb9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7747205668192739447
-    second: photo_2_2026-01-23_02-41-31_0
+      213: 8725215492126109167
+    second: teddybear._0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 10
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: photo_2_2026-01-23_02-41-31_0
+      name: teddybear._0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 960
-        height: 1280
+        x: 27
+        y: 38
+        width: 21
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 770658e328a938b60800000000000000
-      internalID: 7747205668192739447
+      spriteID: fed69ec0341361970800000000000000
+      internalID: 8725215492126109167
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      photo_2_2026-01-23_02-41-31_0: 7747205668192739447
+      teddybear._0: 8725215492126109167
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

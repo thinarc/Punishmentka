@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 340c986b37cf46b4bb942689077cb96b
+guid: b1e62aebb6987f34183dc54eb664762d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7443756053782179069
-    second: background_0
+      213: 7033195864480925652
+    second: "07_\u0434\u0435\u0440\u0435\u0432\u044C\u044F_0"
+  - first:
+      213: 4422257368932948068
+    second: "07_\u0434\u0435\u0440\u0435\u0432\u044C\u044F_1"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,14 +101,14 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background_0
+      name: "07_\u0434\u0435\u0440\u0435\u0432\u044C\u044F_0"
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 224
-        height: 100
+        y: 5
+        width: 37
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30356abce4772b890800000000000000
-      internalID: -7443756053782179069
+      spriteID: 4d7c122106eea9160800000000000000
+      internalID: 7033195864480925652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "07_\u0434\u0435\u0440\u0435\u0432\u044C\u044F_1"
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 13
+        width: 38
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4681a9c95a30f5d30800000000000000
+      internalID: 4422257368932948068
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      background_0: -7443756053782179069
+      "07_\u0434\u0435\u0440\u0435\u0432\u044C\u044F_0": 7033195864480925652
+      "07_\u0434\u0435\u0440\u0435\u0432\u044C\u044F_1": 4422257368932948068
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
