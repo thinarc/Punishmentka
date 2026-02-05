@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c8b5a5404eefebf46873f73d691aa126
+guid: d2e89e7968459ac48b99531df5b50bb8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4136453620380877154
-    second: "02_\u0413\u043E\u0440\u043E\u0434\u0414\u0430\u043B\u044C_0"
+      213: 3595131299264779183
+    second: superchair_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "02_\u0413\u043E\u0440\u043E\u0434\u0414\u0430\u043B\u044C_0"
+      name: superchair_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 39
-        width: 129
-        height: 33
+        x: 39
+        y: 21
+        width: 16
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2614ea0e6a2a76930800000000000000
-      internalID: 4136453620380877154
+      spriteID: fa3d09d6ed874e130800000000000000
+      internalID: 3595131299264779183
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "02_\u0413\u043E\u0440\u043E\u0434\u0414\u0430\u043B\u044C_0": 4136453620380877154
+      superchair_0: 3595131299264779183
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

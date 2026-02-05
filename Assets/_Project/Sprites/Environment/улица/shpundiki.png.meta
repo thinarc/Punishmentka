@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: fc0214224079d56499b0b659733daa3d
+guid: b94fd8e5e30aa6f488f3ea547b90cd32
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6410902021155282922
-    second: "04_\u041A\u0443\u0441\u0442\u044B\u0413\u043E\u0440\u0438\u0437\u043E\u043D\u0442_0"
+      213: -6739493385080398328
+    second: shpundiki_0
+  - first:
+      213: 563554379546728251
+    second: shpundiki_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +116,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "04_\u041A\u0443\u0441\u0442\u044B\u0413\u043E\u0440\u0438\u0437\u043E\u043D\u0442_0"
+      name: shpundiki_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24
-        width: 140
-        height: 23
+        x: 19
+        y: 19
+        width: 9
+        height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aef5bccfb6918f850800000000000000
-      internalID: 6410902021155282922
+      spriteID: 80e103049728872a0800000000000000
+      internalID: -6739493385080398328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shpundiki_1
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 9
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b379f7ce8b522d700800000000000000
+      internalID: 563554379546728251
       vertices: []
       indices: 
       edges: []
@@ -138,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7c3d737529bab25408bd915ae7e1f643
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "04_\u041A\u0443\u0441\u0442\u044B\u0413\u043E\u0440\u0438\u0437\u043E\u043D\u0442_0": 6410902021155282922
+      shpundiki_0: -6739493385080398328
+      shpundiki_1: 563554379546728251
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

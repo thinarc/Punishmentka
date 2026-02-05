@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 4b0e51d6ebd0cad428ec611a9c0a34f9
+guid: c795d87d601529b4fb3a91f4a65e2499
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4738445807867553663
-    second: "11_\u043A\u0435\u043F\u043A\u0430_0"
+      213: 4417089204191564167
+    second: zaborlock_0
   - first:
-      213: -5761088371350788613
-    second: "11_\u043A\u0435\u043F\u043A\u0430_1"
+      213: 3231795883976217459
+    second: zaborlock_1
+  - first:
+      213: 8185845352362551607
+    second: zaborlock_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "11_\u043A\u0435\u043F\u043A\u0430_0"
+      name: zaborlock_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 19
-        width: 9
-        height: 11
+        x: 21
+        y: 32
+        width: 15
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f77626d5b5752c140800000000000000
-      internalID: 4738445807867553663
+      spriteID: 7811d0d7a37ac4d30800000000000000
+      internalID: 4417089204191564167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "11_\u043A\u0435\u043F\u043A\u0430_1"
+      name: zaborlock_1
       rect:
         serializedVersion: 2
-        x: 102
-        y: 8
-        width: 8
-        height: 11
+        x: 0
+        y: 2
+        width: 79
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +156,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf5a00a56a08c00b0800000000000000
-      internalID: -5761088371350788613
+      spriteID: 373d8f2db35a9dc20800000000000000
+      internalID: 3231795883976217459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zaborlock_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 2
+        width: 44
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7392add3af6f99170800000000000000
+      internalID: 8185845352362551607
       vertices: []
       indices: 
       edges: []
@@ -173,8 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "11_\u043A\u0435\u043F\u043A\u0430_0": 4738445807867553663
-      "11_\u043A\u0435\u043F\u043A\u0430_1": -5761088371350788613
+      zaborlock_0: 4417089204191564167
+      zaborlock_1: 3231795883976217459
+      zaborlock_2: 8185845352362551607
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
