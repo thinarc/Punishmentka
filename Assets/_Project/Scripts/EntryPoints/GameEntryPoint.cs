@@ -102,6 +102,12 @@ namespace _Project.Scripts.EntryPoints
                 var allCam = confiner.GetComponent<Camera>();
                 if (!Mathf.Approximately(allCam.orthographicSize, lens)) allCam.orthographicSize = lens;
             });
+            
+            if (!Application.isPlaying) return;
+            states.ForEach(s =>
+            {
+                if (s.scene.name == "Home") MenuInterface.instance.StartMenu();
+            });
         }
         
 #if UNITY_EDITOR

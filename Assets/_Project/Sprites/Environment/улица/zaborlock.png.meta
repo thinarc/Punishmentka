@@ -127,7 +127,7 @@ TextureImporter:
         width: 15
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -149,7 +149,7 @@ TextureImporter:
         width: 79
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -171,7 +171,7 @@ TextureImporter:
         width: 44
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -184,11 +184,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: zaborlock_3
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 16
+        width: 47
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9712048f6411848b3fb26215025909
+      internalID: 1832110099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zaborlock_4
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 16
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e535c2050925634fa0b1d376894e7bd
+      internalID: -829133306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 687e4f0f916e98841807173f809b1f2a
     internalID: 0
     vertices: []
     indices: 
@@ -201,6 +245,8 @@ TextureImporter:
       zaborlock_0: 4417089204191564167
       zaborlock_1: 3231795883976217459
       zaborlock_2: 8185845352362551607
+      zaborlock_3: 1832110099
+      zaborlock_4: -829133306
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

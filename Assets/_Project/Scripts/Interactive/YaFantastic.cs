@@ -1,4 +1,5 @@
 using _Project.Scripts.EntryPoints;
+using _Project.Scripts.Player;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
@@ -20,13 +21,18 @@ namespace _Project.Scripts.Interactive
 
         private async void OnFantasy()
         {
-            if (!extra) await UniTask.Delay(2940);
+            if (!extra)
+            {
+                await UniTask.Delay(2940);
+                _anim.SetTrigger(Shine);
+            }
             else
             {
+                _anim.SetTrigger(Shine);
+                FindAnyObjectByType<PlayerMovement>().DelaySpeed(6);
                 await UniTask.Delay(2940);
                 FindAnyObjectByType<GameEntryPoint>().ChangeLight(0.62f);
             }
-            _anim.SetTrigger(Shine);
         }
 
         private void OnDestroy()

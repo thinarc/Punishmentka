@@ -1,3 +1,5 @@
+using System;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -19,6 +21,8 @@ namespace _Project.Scripts.Player
         
         private Vector2 _target;
         private bool _hasTarget;
+
+        public Vector2 Velocity => _rb.linearVelocity;
 
         private void Start()
         {
@@ -54,6 +58,20 @@ namespace _Project.Scripts.Player
                    pos.y >= 0 && pos.y <= Screen.height;
         }
 
+        public async void DelaySpeed(float d)
+        {
+            var maxSpeed = _maxSpeed;
+            _maxSpeed = maxSpeed / 10f;
+            await UniTask.Delay(TimeSpan.FromSeconds(d / 4));
+            _maxSpeed = maxSpeed / 7.4f;
+            await UniTask.Delay(TimeSpan.FromSeconds(d / 4));
+            _maxSpeed = maxSpeed / 4f;
+            await UniTask.Delay(TimeSpan.FromSeconds(d / 4));
+            _maxSpeed = maxSpeed / 2f;
+            await UniTask.Delay(TimeSpan.FromSeconds(d / 4));
+            _maxSpeed = maxSpeed;
+        }
+
         private void FixedUpdate()
         {
             if (!_hasTarget)
@@ -64,7 +82,14 @@ namespace _Project.Scripts.Player
 
             var current = new Vector2(footPos.position.x, footPos.position.y);
             var direction = (_target - current);
-            _speed = speed * direction.magnitude * 1.44f;
+            var magnitude = direction.magnitude;
+            magnitude = direction.magnitude switch
+            {
+                < 0 => 0f,
+                < 0.64f => 0.64f,
+                _ => magnitude
+            };
+            _speed = speed * magnitude * 1.44f;
             _speed = Mathf.Min(_speed, _maxSpeed);
 
             if (direction.sqrMagnitude < 0.01f)
@@ -80,6 +105,7 @@ namespace _Project.Scripts.Player
         public void ResetTarget()
         {
             _rb.linearVelocity = Vector2.zero;
+            _target = Vector2.zero;
             _hasTarget = false;
         }
     }

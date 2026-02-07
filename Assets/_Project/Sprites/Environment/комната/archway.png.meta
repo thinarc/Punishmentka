@@ -116,12 +116,12 @@ TextureImporter:
       name: archway_0
       rect:
         serializedVersion: 2
-        x: 157
+        x: 158
         y: 6
-        width: 67
+        width: 32
         height: 85
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -134,11 +134,77 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: archway_1
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 6
+        width: 34
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af910bad6ec36f348a6837205511ece4
+      internalID: -1718625111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archway_2
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 6
+        width: 67
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285fbfff7250be94f9d9697cabd733d3
+      internalID: -1884934796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: archway_3
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 6
+        width: 24
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5320a7cc858a224485e3e031b120a33
+      internalID: -1111975334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ba8d5b5aae481694797a7eeae24ca93e
     internalID: 0
     vertices: []
     indices: 
@@ -149,6 +215,9 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       archway_0: 4642019072667329258
+      archway_1: -1718625111
+      archway_2: -1884934796
+      archway_3: -1111975334
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
