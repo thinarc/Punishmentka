@@ -27,6 +27,9 @@ namespace _Project.Scripts.EntryPoints
         [SerializeField] private Transform worldViewSmallData;
 
         [SerializeField, Space(5)] private SimpleConfiner2D confiner;
+        
+        [SerializeField, Space(5)] private GameObject menuInterface;
+        [SerializeField] private bool skipMenu;
 
         private int _lastOnStart = -100;
 
@@ -35,6 +38,7 @@ namespace _Project.Scripts.EntryPoints
             _targetIntensity = globals[0].intensity;
             
             if (!Application.isPlaying) return;
+            ChangeScene();
             states.ForEach(s =>
             {
                 if (s.onStart) SoundManager.instance.PlayClip(s.sound);
@@ -88,9 +92,11 @@ namespace _Project.Scripts.EntryPoints
                 volumeCamera[1].profile = null;
                 var renderMaterialsIndex = 0;
                 if (isChangedView) renderMaterialsIndex = 2;
-                if (worldView.sharedMaterial == renderMaterials[renderMaterialsIndex]) return;
-                worldView.sharedMaterial = renderMaterials[renderMaterialsIndex];
-                worldViewRep.sharedMaterial = renderMaterials[renderMaterialsIndex + 1];
+                if (worldView.sharedMaterial != renderMaterials[renderMaterialsIndex])
+                {
+                    worldView.sharedMaterial = renderMaterials[renderMaterialsIndex];
+                    worldViewRep.sharedMaterial = renderMaterials[renderMaterialsIndex + 1];
+                }
                 var scale = worldViewData.localScale;
                 var pos = worldViewData.position;
                 if (isChangedView) scale = worldViewSmallData.localScale;
@@ -101,18 +107,23 @@ namespace _Project.Scripts.EntryPoints
                 if (isChangedView) lens = worldViewSmallData.GetComponent<WorldViewLens>().lens;
                 var allCam = confiner.GetComponent<Camera>();
                 if (!Mathf.Approximately(allCam.orthographicSize, lens)) allCam.orthographicSize = lens;
+                
+                if (!skipMenu && s.scene.name == "Home") menuInterface.SetActive(true);
+                else menuInterface.SetActive(false);
             });
             
             if (!Application.isPlaying) return;
             states.ForEach(s =>
             {
-                if (s.scene.name == "Home") MenuInterface.instance.StartMenu();
+                if (!skipMenu && s.onStart && s.scene.name == "Home") MenuInterface.instance.StartMenu();
             });
         }
         
 #if UNITY_EDITOR
         private void OnValidate()
         {
+            if (Application.isPlaying) return;
+            
             if (states.Count == 0 || states[0].scene == null)
             {
                 states = new List<SceneState>();

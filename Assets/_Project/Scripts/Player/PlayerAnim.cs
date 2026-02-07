@@ -29,7 +29,7 @@ namespace _Project.Scripts.Player
         {
             var velocity = _player.Velocity;
             _anim.SetFloat("idlemulti", idleMulti);
-            _anim.SetBool("walk", velocity.magnitude > 0.03f);
+            _anim.SetBool("walk", velocity.magnitude > 0.034f);
             
             var acceleration = velocity.magnitude;
             if (acceleration < 0.24f) acceleration = 0.24f;
@@ -37,7 +37,7 @@ namespace _Project.Scripts.Player
             if (acceleration > 0.99f) acceleration = 0.99f;
             _anim.SetFloat("walkmulti", walkMulti * acceleration);
             
-            if (velocity.magnitude <= 0.03f) return;
+            if (velocity.magnitude <= 0.034f) return;
             if (Mathf.Abs(_player.Velocity.x) > Mathf.Abs(_player.Velocity.y))
             {
                 if (velocity.x > 0 && _current != 3) ChangeController(3);
