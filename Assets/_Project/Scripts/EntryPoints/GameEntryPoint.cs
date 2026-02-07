@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using NavMeshPlus.Extensions;
 using Sirenix.OdinInspector;
+using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
