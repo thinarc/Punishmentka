@@ -19,22 +19,7 @@ namespace _Project.Scripts.MiniGame
             var keysBox = _keys.Where(k => k.BlockForm == BlockForm.Box).ToList();
             var keysL = _keys.Where(k => k.BlockForm is BlockForm.LUpLeft or BlockForm.LUpRight or BlockForm.LDownRight or BlockForm.LDownLeft).ToList();
             var keysI = _keys.Where(k => k.BlockForm is BlockForm.IHorizontal or BlockForm.IVertical).ToList();
-
-            var boxes = area / 4;
-            area %= 4;
-            print("boxes: " + boxes);
-            print("area / 4: " + area);
-            var lforms = area / 3;
-            area %= 3;
-            print("lforms: " + lforms);
-            print("area / 3: " + area);
-            var iforms = area / 2;
-            area %= 2;
-            print("iforms: " + iforms);
-            print("area / 2: " + area);
-
-            var count = boxes + lforms + iforms;
-            if (count is > 3 or < 1) throw new Exception("Count out of range: " + count);
+            CalcUniqueForms(area, out var boxes, out var lforms, out var iforms);
 
             for (; boxes > 0; boxes--)
             {
@@ -58,6 +43,8 @@ namespace _Project.Scripts.MiniGame
                 
                 if (TryGetAnchor(randL, out var ax, out var ay))
                 {
+                    randL.gameObject.SetActive(true);
+                    
                     var localSheet = BuildSheetForKey(randL, sheet, ax, ay);
                     randL.Fill(localSheet);
                 }
@@ -71,6 +58,8 @@ namespace _Project.Scripts.MiniGame
                 
                 if (TryGetAnchor(randI, out var ax, out var ay))
                 {
+                    randI.gameObject.SetActive(true);
+                    
                     var localSheet = BuildSheetForKey(randI, sheet, ax, ay);
                     randI.Fill(localSheet);
                 }
@@ -120,6 +109,61 @@ namespace _Project.Scripts.MiniGame
             ax = Random.Range(0, limitX + 1);
             ay = Random.Range(0, limitY + 1);
             return true;
+        }
+
+        private static void CalcUniqueForms(int area, out int boxes, out int lforms, out int iforms)
+        {
+            boxes = 0;
+            lforms = 0;
+            iforms = 0;
+            
+            switch (area)
+            {
+                case 2:
+                    iforms = 1;
+                    break;
+                case 3:
+                    lforms = 1;
+                    break;
+                case 4:
+                    boxes = 1;
+                    break;
+                case 5:
+                    lforms = 1;
+                    iforms = 1;
+                    break;
+                case 6:
+                    boxes = 1;
+                    iforms = 1;
+                    break;
+                case 7:
+                    boxes = 1;
+                    lforms = 1;
+                    break;
+                case 8:
+                    boxes = 2;
+                    break;
+                case 9:
+                    boxes = 1;
+                    lforms = 1;
+                    iforms = 1;
+                    break;
+                case 10:
+                    boxes = 2;
+                    iforms = 1;
+                    break;
+                case 11:
+                    boxes = 2;
+                    lforms = 1;
+                    break;
+                case 12:
+                    boxes = 3;
+                    break;
+                default:
+                    throw new Exception("Unknown area: " + area);
+            }
+            
+            print($"area: {area}, boxes: {boxes}, lforms: {lforms}, iforms: {iforms}");
         }
     }
 }

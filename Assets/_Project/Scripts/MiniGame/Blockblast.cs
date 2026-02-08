@@ -30,7 +30,6 @@ namespace _Project.Scripts.MiniGame
             
             Resources.LoadAll<Sprite>("Grids/MonsterGrid").ForEach(s => sheet.Add(s));
             var randSquare = Random.Range(2, 13);
-            print("randSquare: " + randSquare);
             tools.InitKeys(sheet, randSquare);
         }
 

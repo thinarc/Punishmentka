@@ -13,8 +13,6 @@ namespace _Project.Scripts.MiniGame
         
         public BlockForm BlockForm => blockForm;
 
-        private Animator _anim;
-
         [Header("Debug")]
         [SerializeField, Space(5)] private List<Image> squares;
 
@@ -26,8 +24,6 @@ namespace _Project.Scripts.MiniGame
 
         public void Fill(Sprite[] sheet)
         {
-            _anim = GetComponent<Animator>();
-            
             var cells = GetComponentsInChildren<RectTransform>()[1];
             if (cells.name != "Cells") throw new Exception("Cells not found");
             var index = 0;
