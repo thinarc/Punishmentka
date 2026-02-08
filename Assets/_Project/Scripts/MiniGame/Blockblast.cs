@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Sirenix.Utilities;
 using UnityEngine;
 
 namespace _Project.Scripts.MiniGame
@@ -11,35 +13,26 @@ namespace _Project.Scripts.MiniGame
         
         private Animator _anim;
 
-        private bool[,] _shape = new bool[8, 8];
+        [Header("Debug")]
+        [SerializeField, Space(5)] private List<Sprite> sheet;
+        private readonly bool[,] _shape = new bool[8, 8];
 
         private void Start()
         {
             _anim = GetComponent<Animator>();
-
             RunGame();
         }
 
         public void RunGame()
         {
-            tools.Initialize();
-            print(Resources.LoadAll<Sprite>("Grids/MonsterGrid").Length);
-            
-            UpdateModel();
-            UpdateView();
-        }
-
-        private void UpdateModel()
-        {
-
-        }
-
-        private void UpdateView()
-        {
             _anim.enabled = true;
             _anim.SetTrigger("Show");
             
-            tools.ShowKeys();
+            Resources.LoadAll<Sprite>("Grids/MonsterGrid").ForEach(s => sheet.Add(s));
+            // var randPl = Random.Range(2, 13);
+            var randPl = Random.Range(5, 6);
+            print(randPl + " square");
+            tools.InitKeys(sheet, randPl);
         }
 
         private void OnDrawGizmos()
