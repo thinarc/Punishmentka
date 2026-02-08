@@ -4,8 +4,10 @@ namespace _Project.Scripts.MiniGame
 {
     public class Blockblast : MonoBehaviour
     {
-        [SerializeField] private RectTransform source;
+        [SerializeField, Space(5)] private RectTransform source;
         [SerializeField] private float cellSize;
+        
+        [SerializeField, Space(5)] private BlockblastTools tools;
         
         private Animator _anim;
 
@@ -20,6 +22,9 @@ namespace _Project.Scripts.MiniGame
 
         public void RunGame()
         {
+            tools.Initialize();
+            print(Resources.LoadAll<Sprite>("Grids/MonsterGrid").Length);
+            
             UpdateModel();
             UpdateView();
         }
@@ -33,6 +38,8 @@ namespace _Project.Scripts.MiniGame
         {
             _anim.enabled = true;
             _anim.SetTrigger("Show");
+            
+            tools.ShowKeys();
         }
 
         private void OnDrawGizmos()
