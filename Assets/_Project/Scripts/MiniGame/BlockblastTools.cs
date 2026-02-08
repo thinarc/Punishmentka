@@ -24,12 +24,14 @@ namespace _Project.Scripts.MiniGame
             area %= 4;
             print("boxes: " + boxes);
             print("area / 4: " + area);
+            var lforms = area / 3;
             area %= 3;
+            print("lforms: " + lforms);
+            print("area / 3: " + area);
             var iforms = area / 2;
             area %= 2;
-            
-            print("lforms: " + lforms);
             print("iforms: " + iforms);
+            print("area / 2: " + area);
 
             var count = boxes + lforms + iforms;
             if (count is > 3 or < 1) throw new Exception("Count out of range: " + count);

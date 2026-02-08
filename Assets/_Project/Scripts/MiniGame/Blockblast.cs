@@ -29,10 +29,9 @@ namespace _Project.Scripts.MiniGame
             _anim.SetTrigger("Show");
             
             Resources.LoadAll<Sprite>("Grids/MonsterGrid").ForEach(s => sheet.Add(s));
-            // var randPl = Random.Range(2, 13);
-            var randPl = Random.Range(5, 6);
-            print(randPl + " square");
-            tools.InitKeys(sheet, randPl);
+            var randSquare = Random.Range(2, 13);
+            print("randSquare: " + randSquare);
+            tools.InitKeys(sheet, randSquare);
         }
 
         private void OnDrawGizmos()
