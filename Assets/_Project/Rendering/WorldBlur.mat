@@ -21,7 +21,7 @@ Material:
   - _ENABLESQUEEZE_ON
   - _PIXELPERFECTSPACE_ON
   - _PIXELPERFECTUV_ON
-  - _SHADERFADING_SPREAD
+  - _SHADERFADING_FULL
   - _SHADERSPACE_UV
   - _TEXTURELAYER1SHEETTOGGLE_ON
   - _TEXTURELAYER2SHEETTOGGLE_ON
@@ -261,7 +261,7 @@ Material:
     - _EnchantedRainbowSpeed: 0.5
     - _EnchantedRainbowToggle: 0
     - _EnchantedReduce: 0
-    - _FadingFade: 50
+    - _FadingFade: 1
     - _FadingNoiseFactor: 0.2
     - _FadingWidth: 0.3
     - _FlameBrightness: 10
@@ -302,7 +302,7 @@ Material:
     - _HologramMinAlpha: 0.2
     - _Hue: 0
     - _InkSpreadContrast: 0.24
-    - _InkSpreadDistance: 15
+    - _InkSpreadDistance: -1.4888767
     - _InkSpreadFade: 0.92
     - _InkSpreadNoiseFactor: 5
     - _InkSpreadWidth: 0.2
@@ -356,7 +356,7 @@ Material:
     - _Saturation: 1
     - _ScreenTilingPixelsPerUnit: 100
     - _ScreenWidthUnits: 163.57
-    - _ShaderFading: 4
+    - _ShaderFading: 1
     - _ShaderSpace: 0
     - _ShadowFade: 1
     - _SharpenFactor: 4

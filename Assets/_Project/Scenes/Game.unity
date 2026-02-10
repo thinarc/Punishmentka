@@ -5388,7 +5388,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9b1ae28f4a6c8542a416712a9582730, type: 2}
+  - {fileID: 2100000, guid: 7fcea84dff1237b499a4afea533681ef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24587,6 +24587,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1034622182}
   - component: {fileID: 1034622183}
+  - component: {fileID: 1034622184}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -24634,6 +24635,23 @@ MonoBehaviour:
   - {fileID: 2020557777}
   - {fileID: 153209803}
   - {fileID: 660832159}
+  menu: {fileID: 1034622184}
+  menuRect: {fileID: 1034622182}
+  logo: {fileID: 1437421565}
+  logoRect: {fileID: 1437421561}
+  buttonRect: {fileID: 1474060928}
+--- !u!225 &1034622184
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034622181}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1043965117
 GameObject:
   m_ObjectHideFlags: 0
@@ -36586,13 +36604,13 @@ MonoBehaviour:
     \u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ffc7e447deb2bc4c893ee3a0e41b834, type: 2}
-  m_sharedMaterial: {fileID: -7971553181787183958, guid: 457aed975d9e06b46b82b56931e5a221, type: 2}
+  m_sharedMaterial: {fileID: 6152578511092854718, guid: 4ffc7e447deb2bc4c893ee3a0e41b834, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4279637526
   m_fontColor: {r: 0.08627451, g: 0.08627451, b: 0.08627451, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -36651,7 +36669,7 @@ MonoBehaviour:
   m_margin: {x: 150, y: 0, z: 150, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1273509490
@@ -41626,6 +41644,7 @@ GameObject:
   - component: {fileID: 1437421561}
   - component: {fileID: 1437421564}
   - component: {fileID: 1437421563}
+  - component: {fileID: 1437421565}
   m_Layer: 5
   m_Name: Logo
   m_TagString: Untagged
@@ -41691,6 +41710,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437421560}
   m_CullTransparentMesh: 1
+--- !u!225 &1437421565
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437421560}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 1
 --- !u!1 &1440523818
 GameObject:
   m_ObjectHideFlags: 0
@@ -42485,7 +42516,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -42503,7 +42534,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1474060930}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1034622183}
+        m_TargetAssemblyTypeName: _Project.Scripts.EntryPoints.MenuInterface, Assembly-CSharp
+        m_MethodName: UndoMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: b9b1ae28f4a6c8542a416712a9582730, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1474060930
 MonoBehaviour:
   m_ObjectHideFlags: 0
