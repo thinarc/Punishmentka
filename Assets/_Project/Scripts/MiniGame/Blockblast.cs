@@ -3,6 +3,7 @@ using System.Linq;
 using Cysharp.Threading.Tasks;
 using Sirenix.Utilities;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace _Project.Scripts.MiniGame
 {
@@ -31,6 +32,8 @@ namespace _Project.Scripts.MiniGame
         {
             _anim.enabled = true;
             _anim.SetTrigger("Show");
+
+            await ShowProgress(true);
             
             var sprites = Resources.LoadAll<Sprite>("Grids/MonsterGrid");
             sprites.ForEach(s => sheet.Add(s));
@@ -41,11 +44,47 @@ namespace _Project.Scripts.MiniGame
                 p.SetSprite(sprites[i]);
                 i++;
             });
-
-            while (Time.time < 25)
+            
+            while (true)
             {
                 await ShowKeys();
+                await ShowProgress();
             }
+        }
+
+        [SerializeField] private Slider progress;
+
+        public async UniTask ShowProgress(bool start = false)
+        {
+            if (start) 
+            {
+                progress.gameObject.SetActive(false);
+                return;
+            }
+            progress.gameObject.SetActive(true);
+            progress.value = GetProgress();
+            
+            await UniTask.Delay(2000);
+        }
+        
+        public float GetProgress()
+        {
+            int filled = 0;
+            int width = _shape.GetLength(0);
+            int height = _shape.GetLength(1);
+
+            for (int x = 0; x < width; x++)
+            {
+                for (int y = 0; y < height; y++)
+                {
+                    if (_shape[x, y])
+                        filled++;
+                }
+            }
+
+            int total = width * height;
+
+            return (float)filled / total;
         }
 
         private int _cycle;
@@ -105,22 +144,36 @@ namespace _Project.Scripts.MiniGame
                 points[x + y * 8].Show();
             }
 
-            var addes = 6;
-            for (var a = 0; a < _shape.GetLength(0); a++)
+            List<int> free = new();
+
+            // собрать все свободные клетки
+            for (int y = 0; y < 8; y++)
             {
-                for (var b = 0; b < _shape.GetLength(1); b++)
+                for (int x = 0; x < 8; x++)
                 {
-                    if (!_shape[a, b])
-                    {
-                        if (addes > 0 && Random.Range(0, 11) == 10)
-                        {
-                            _shape[a, b] = true;
-                            points[a + b * 8].Show();
-                            addes--;
-                        }
-                        else continue;
-                    }
+                    if (!_shape[x, y])
+                        free.Add(x + y * 8);
                 }
+            }
+
+            // перемешать
+            for (int i = 0; i < free.Count; i++)
+            {
+                int rnd = Random.Range(i, free.Count);
+                (free[i], free[rnd]) = (free[rnd], free[i]);
+            }
+
+            // взять первые addes
+            int count = Mathf.Min(Random.Range(2, 10), free.Count);
+
+            for (int i = 0; i < count; i++)
+            {
+                int index = free[i];
+                int x = index % 8;
+                int y = index / 8;
+
+                _shape[x, y] = true;
+                points[index].Show();
             }
             
             return true;

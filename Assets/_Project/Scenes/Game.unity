@@ -31223,7 +31223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1093758032
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32642,6 +32642,7 @@ MonoBehaviour:
   tools: {fileID: 1024333541}
   sheet: []
   points: []
+  progress: {fileID: 1093758033}
 --- !u!1 &1145591853
 GameObject:
   m_ObjectHideFlags: 0
