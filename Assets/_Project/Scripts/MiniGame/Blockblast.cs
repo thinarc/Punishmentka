@@ -1,9 +1,12 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using Sirenix.Utilities;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace _Project.Scripts.MiniGame
 {
@@ -20,22 +23,53 @@ namespace _Project.Scripts.MiniGame
         [Header("Debug")]
         [SerializeField, Space(5)] private List<Sprite> sheet;
         [SerializeField] private List<BlockblastKey> points;
-        private readonly bool[,] _shape = new bool[8, 8];
+        private bool[,] _shape = new bool[8, 8];
 
         private void Start()
         {
             _anim = GetComponent<Animator>();
-            RunGame();
+            // RunGame();
         }
 
         public async void RunGame()
         {
+            await RunCycle(1);
+            await RunCycle(2);
+            await RunCycle(3);
+            await RunCycle(4);
+        }
+
+        private Sprite[] GetPhoto(int i, bool getForSource = false)
+        {
+            var index = i;
+            if (getForSource) index = Convert.ToInt32(i + "1");
+            return Resources.LoadAll<Sprite>($"Grids/{index}");
+        }
+
+        private async UniTask RunCycle(int photo)
+        {
+            _anim.ResetTrigger("Show");
+            _anim.ResetTrigger("Hide");
+            sheet.Clear();
+            _finishFill = false;
+            _hideEnd = false;
+            progress.value = 0;
+            targetProgress = 0;
+            _startValue = 0;
+            _elapsed = 0;
+            _cycle = 0;
+            tools.ResetKeys();
+            _shape = new bool[8, 8];
+            grid.GetComponent<CanvasGroup>().DOFade(1, 0);
+            
             _anim.enabled = true;
             _anim.SetTrigger("Show");
 
             await ShowProgress(true);
             
-            var sprites = Resources.LoadAll<Sprite>("Grids/MonsterGrid");
+            var sprites = GetPhoto(photo);
+            source.GetComponent<Image>().sprite = GetPhoto(photo, true)[0];
+            source.GetComponent<Image>().DOFade(0, 0);
             sprites.ForEach(s => sheet.Add(s));
             points = grid.GetComponentsInChildren<BlockblastKey>().ToList();
             var i = 0;
@@ -47,12 +81,48 @@ namespace _Project.Scripts.MiniGame
             
             while (true)
             {
-                await ShowKeys();
+                if (!_finishFill) await ShowKeys();
+                else
+                {
+                    // await ShowProgress();
+                    await grid.GetComponent<CanvasGroup>().DOFade(0, 0.24f).SetEase(Ease.InOutSine).AsyncWaitForCompletion();
+                    await UniTask.Delay(400);
+                    await source.GetComponent<Image>().DOFade(1, 0.44f).SetEase(Ease.InOutSine).AsyncWaitForCompletion();
+                    _anim.ResetTrigger("Show");
+                    _anim.SetTrigger("Hide");
+                    _anim.enabled = true;
+                    _anim.ResetTrigger("Show");
+                    _anim.SetTrigger("Hide");
+                    _hideEnd = false;
+                    await UniTask.WaitUntil(() => _hideEnd);
+                    break;
+                }
                 await ShowProgress();
             }
         }
 
+        private bool _hideEnd;
+
         [SerializeField] private Slider progress;
+
+        
+        private float _startValue;
+        private float _elapsed;
+        [SerializeField] private float duration = 0.5f;
+        private void Update()
+        {
+            if (_elapsed >= duration) return;
+
+            _elapsed += Time.deltaTime;
+
+            float t = Mathf.Clamp01(_elapsed / duration);
+
+            // InOutSine
+            float eased = -(Mathf.Cos(Mathf.PI * t) - 1f) / 2f;
+
+            progress.value = Mathf.Lerp(_startValue, targetProgress, eased);
+        }
+        private float targetProgress;
 
         public async UniTask ShowProgress(bool start = false)
         {
@@ -61,10 +131,18 @@ namespace _Project.Scripts.MiniGame
                 progress.gameObject.SetActive(false);
                 return;
             }
+
+            progress.GetComponent<CanvasGroup>().DOFade(0, 0);
             progress.gameObject.SetActive(true);
-            progress.value = GetProgress();
+            await progress.GetComponent<CanvasGroup>().DOFade(1f, 0.4f).SetEase(Ease.InOutSine).AsyncWaitForCompletion();
+            _startValue = progress.value;
+            targetProgress = GetProgress();
+            _elapsed = 0f;
             
-            await UniTask.Delay(2000);
+            await UniTask.WaitUntil(() => Mathf.Approximately(progress.value, targetProgress));
+            await UniTask.Delay(200);
+            await progress.GetComponent<CanvasGroup>().DOFade(0f, 0.4f).SetEase(Ease.InOutSine).AsyncWaitForCompletion();
+            progress.gameObject.SetActive(false);
         }
         
         public float GetProgress()
@@ -92,8 +170,12 @@ namespace _Project.Scripts.MiniGame
         {
             _cycle++;
             var randSquare = Random.Range(5, 13);
-            if (_cycle > 4) randSquare = Random.Range(1, 7);
-            await tools.InitKeys(sheet, randSquare);
+            if (_cycle > 3 && _cycle < 4) randSquare = Random.Range(3, 11);
+            if (_cycle > 4) randSquare = Random.Range(2, 9);
+            var wait = tools.InitKeys(sheet, randSquare);
+            await tools.GetComponent<CanvasGroup>().DOFade(0, 0).AsyncWaitForCompletion();
+            tools.GetComponent<CanvasGroup>().DOFade(1f, 0.4f).SetEase(Ease.InOutSine);
+            await wait;
         }
 
         public bool TryGetCellPosition(Vector2 screenPos, Camera cam, out Vector2Int cell)
@@ -106,7 +188,6 @@ namespace _Project.Scripts.MiniGame
             
             local.x += source.rect.width / 2;
             local.y += source.rect.height;
-            print(new Vector2(local.x, local.y));
 
             var x = Mathf.FloorToInt(local.x * cellSize) - 1;
             var y = Mathf.FloorToInt(local.y * cellSize) - 1;
@@ -176,8 +257,26 @@ namespace _Project.Scripts.MiniGame
                 points[index].Show();
             }
             
+            bool allFilled = true;
+            for (int y = 0; y < 8; y++)
+            {
+                for (int x = 0; x < 8; x++)
+                {
+                    if (!_shape[x, y])
+                        allFilled = false;
+                }
+            }
+
+            if (allFilled)
+            {
+                _finishFill = true;
+                tools.UndoWait();
+            }
+            
             return true;
         }
+
+        private bool _finishFill;
         
         public Vector3 GetWorldFromCell(Vector2Int cell)
         {
@@ -214,6 +313,10 @@ namespace _Project.Scripts.MiniGame
             }
         }
 
-        public void BlockAnim() => _anim.enabled = false;
+        public void BlockAnim()
+        {
+            _anim.enabled = false;
+            _hideEnd = true;
+        }
     }
 }

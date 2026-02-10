@@ -45,7 +45,6 @@ namespace _Project.Scripts.MiniGame
             
             if (!_tools.TryGetCellPosition(eventData.position, eventData.pressEventCamera, out var cell))
             {
-                print("Can't get cell position" + cell);
                 _rect.DOMove(_startPos, 0.2f).SetEase(Ease.InOutSine);
                 _anim.SetBool("Drag", false);
                 return;
@@ -53,13 +52,11 @@ namespace _Project.Scripts.MiniGame
 
             if (!_tools.TryPlace(cell, _key.Cells))
             {
-                print("Can't place " + cell);
                 _rect.DOMove(_startPos, 0.24f).SetEase(Ease.InOutSine);
                 _anim.SetBool("Drag", false);
                 return;
             }
             
-            print("Place " + cell);
             cells.anchoredPosition = new Vector2(0, cells.anchoredPosition.y);
             var worldPos = _tools.GetWorldFromCell(cell);
             _rect.position = worldPos;

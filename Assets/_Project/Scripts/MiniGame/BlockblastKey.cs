@@ -28,6 +28,7 @@ namespace _Project.Scripts.MiniGame
             gridElement = true;
             anim ??= GetComponent<Animator>();
             anim.SetBool("Drag", true);
+            anim.SetBool("Catch", false);
             GetComponent<CanvasGroup>().DOFade(0, 0.4f).SetEase(Ease.InOutSine);
         }
 
@@ -60,7 +61,11 @@ namespace _Project.Scripts.MiniGame
             
             anim ??= GetComponent<Animator>();
             if (anim == null) return;
-            await UniTask.WaitUntil(() => anim.GetBool("Catch"));
+            await UniTask.WaitUntil(() =>
+            {
+                if (anim == null) return true;
+                return anim.GetBool("Catch");
+            });
         }
 
         private static Vector2Int[] CalcForm(BlockForm form)

@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -22,6 +23,14 @@ namespace _Project.Scripts.MiniGame
             _awaits.Add(task);
             await task;
             _awaits.Remove(task);
+        }
+
+        public void ResetKeys()
+        {
+            _insts = null;
+            _waiting = false;
+            _keys = null;
+            spawned.Clear();
         }
         
         public async UniTask InitKeys(List<Sprite> sheet, int area)
@@ -52,6 +61,7 @@ namespace _Project.Scripts.MiniGame
                         Quaternion.identity, randBox.transform.parent);
                     instBox.SetActive(true);
                     _insts.Add(instBox);
+                    spawned.Add(instBox);
                     
                     var localSheet = BuildSheetForKey(instBox.GetComponent<BlockblastKey>(), sheet, ax, ay);
                     AwaitCatch(instBox.GetComponent<BlockblastKey>().Fill(localSheet));
@@ -69,6 +79,7 @@ namespace _Project.Scripts.MiniGame
                         Quaternion.identity, point.transform.parent);
                     instBox.SetActive(true);
                     _insts.Add(instBox);
+                    spawned.Add(instBox);
                     
                     var localSheet = BuildSheetForKey(instBox.GetComponent<BlockblastKey>(), sheet, ax, ay);
                     AwaitCatch(instBox.GetComponent<BlockblastKey>().Fill(localSheet));
@@ -86,6 +97,7 @@ namespace _Project.Scripts.MiniGame
                         Quaternion.identity, randL.transform.parent);
                     instBox.SetActive(true);
                     _insts.Add(instBox);
+                    spawned.Add(instBox);
                     
                     var localSheet = BuildSheetForKey(instBox.GetComponent<BlockblastKey>(), sheet, ax, ay);
                     AwaitCatch(instBox.GetComponent<BlockblastKey>().Fill(localSheet));
@@ -103,6 +115,7 @@ namespace _Project.Scripts.MiniGame
                         Quaternion.identity, randI.transform.parent);
                     instBox.SetActive(true);
                     _insts.Add(instBox);
+                    spawned.Add(instBox);
                     
                     var localSheet = BuildSheetForKey(instBox.GetComponent<BlockblastKey>(), sheet, ax, ay);
                     AwaitCatch(instBox.GetComponent<BlockblastKey>().Fill(localSheet));
@@ -110,8 +123,30 @@ namespace _Project.Scripts.MiniGame
                 else return;
             }
 
-            await UniTask.WaitUntil(() => _awaits.Count == 0);
-            _awaits.Clear();
+            _waiting = true;
+            await UniTask.WaitUntil(() =>
+            {
+                return _awaits.Count == 0 || _waiting == false;
+            });
+            if (_waiting) _awaits.Clear();
+            _waiting = false;
+        }
+
+        private bool _waiting;
+        private List<GameObject> spawned = new List<GameObject>();
+        public void UndoWait()
+        {
+            if (_insts != null && _insts?.Count != 0)
+            {
+                _insts.ForEach(i => Destroy(i));
+                _insts.Clear();
+            }
+            _waiting = false;
+            spawned.ForEach(async g =>
+            {
+                await GetComponent<CanvasGroup>().DOFade(0f, 0.4f).SetEase(Ease.InOutSine).AsyncWaitForCompletion();
+                Destroy(g);
+            });
         }
 
         public bool TryGetCellPosition(Vector2 screenPos, Camera cam, out Vector2Int cell) =>
@@ -218,8 +253,6 @@ namespace _Project.Scripts.MiniGame
                 default:
                     throw new Exception("Unknown area: " + area);
             }
-            
-            print($"area: {area}, boxes: {boxes}, lforms: {lforms}, iforms: {iforms}, points: {points}");
         }
     }
 }
