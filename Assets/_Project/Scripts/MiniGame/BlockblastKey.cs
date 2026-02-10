@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,9 +14,30 @@ namespace _Project.Scripts.MiniGame
         private Vector2Int[] _cells;
         
         public BlockForm BlockForm => blockForm;
+        public Vector2Int[] Cells => _cells;
 
         [Header("Debug")]
         [SerializeField, Space(5)] private List<Image> squares;
+
+        private bool gridElement;
+        private Animator anim;
+
+        public void SetSprite(Sprite image)
+        {
+            GetComponentInChildren<Image>().sprite = image;
+            gridElement = true;
+            anim ??= GetComponent<Animator>();
+            anim.SetBool("Drag", true);
+            GetComponent<CanvasGroup>().DOFade(0, 0.4f).SetEase(Ease.InOutSine);
+        }
+
+        public void Show()
+        {
+            if (!gridElement) return;
+            anim ??= GetComponent<Animator>();
+            anim.SetBool("Catch", true);
+            GetComponent<CanvasGroup>().DOFade(1, 0.4f).SetEase(Ease.InOutSine);
+        }
 
         public Vector2Int[] GetCells()
         {
@@ -22,7 +45,7 @@ namespace _Project.Scripts.MiniGame
             return _cells;
         }
 
-        public void Fill(Sprite[] sheet)
+        public async UniTask Fill(Sprite[] sheet)
         {
             var cells = GetComponentsInChildren<RectTransform>()[1];
             if (cells.name != "Cells") throw new Exception("Cells not found");
@@ -34,6 +57,10 @@ namespace _Project.Scripts.MiniGame
                 s.sprite = sheet[index];
                 index++;
             });
+            
+            anim ??= GetComponent<Animator>();
+            if (anim == null) return;
+            await UniTask.WaitUntil(() => anim.GetBool("Catch"));
         }
 
         private static Vector2Int[] CalcForm(BlockForm form)
@@ -60,6 +87,7 @@ namespace _Project.Scripts.MiniGame
                 // (0,0)
                 // (0,1) (1,1)
                 BlockForm.LDownLeft => new Vector2Int[] { new(0, 0), new(0, 1), new(1, 1), },
+                BlockForm.Point => new Vector2Int[] { new(0, 0) },
                 _ => throw new ArgumentOutOfRangeException()
             };
         }
@@ -73,6 +101,7 @@ namespace _Project.Scripts.MiniGame
         LDownRight,
         LDownLeft,
         IHorizontal,
-        IVertical
+        IVertical,
+        Point
     }
 }
