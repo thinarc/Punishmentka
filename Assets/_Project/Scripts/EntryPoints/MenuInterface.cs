@@ -1,9 +1,12 @@
 using System;
+using System.Linq;
+using _Project.Scripts.Player;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Sirenix.Utilities;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace _Project.Scripts.EntryPoints
 {
@@ -31,13 +34,14 @@ namespace _Project.Scripts.EntryPoints
             upLayers.ForEach(g => g.SetActive(false));
             texture.sharedMaterial.SetFloat("_InkSpreadDistance", inkSpread);
             texture.sharedMaterial.SetFloat("_FadingFade", 1);
+            texture.sharedMaterial.SetFloat("_GaussianBlurFade", 1);
         }
 
         private void Update()
         {
             if (inkSpeadAnim)
             {
-                inkSpread = Mathf.Lerp(inkSpread, -5f, 1.0012f - Mathf.Exp(-0.2f * Time.unscaledDeltaTime));
+                inkSpread = Mathf.Lerp(inkSpread, -5f, 1.001f - Mathf.Exp(-0.2f * Time.unscaledDeltaTime));
                 texture.sharedMaterial.SetFloat("_InkSpreadDistance", inkSpread);
             }
         }
@@ -62,28 +66,57 @@ namespace _Project.Scripts.EntryPoints
             await UniTask.WaitWhile(() =>
             {
                 var val = texture.sharedMaterial.GetFloat("_FadingFade");
-                texture.sharedMaterial.SetFloat("_FadingFade", 1);
+                val = Mathf.MoveTowards(val, 0, 1f * Time.deltaTime);
+                texture.sharedMaterial.SetFloat("_FadingFade", val);
                 return val != 0;
             });
-            await UniTask.Delay(5000);
+            await UniTask.WaitWhile(() =>
+            {
+                var val = texture.sharedMaterial.GetFloat("_GaussianBlurFade");
+                val = Mathf.MoveTowards(val, 0, 1f * Time.deltaTime);
+                texture.sharedMaterial.SetFloat("_GaussianBlurFade", val);
+                return val != 0;
+            });
         }
 
         public async void UndoMenu(Material start)
         {
             var tween = buttonRect.DOShakePosition(0.1f, 3f).SetLoops(-1).SetEase(Ease.OutBack);
             buttonRect.GetComponent<Button>().interactable = false;
-            inkSpeadAnim = true;
             
-            await UniTask.Delay(2000);
+            await UniTask.Delay(400);
+            inkSpeadAnim = true;
+            await UniTask.Delay(200);
             logo.DOFade(0, 0.74f).SetEase(Ease.InOutSine);
             await UniTask.Delay(TimeSpan.FromSeconds(0.4f));
             menu.DOFade(0, 0.34f).SetEase(Ease.InOutSine);
 
             await UndoMaterial();
             texture.sharedMaterial = start;
-            upLayers.ForEach(g => g.SetActive(true));
+            var player = upLayers[0];
+            upLayers[0] = null;
+            upLayers.ForEach(g =>
+            {
+                if (g == null) return;
+                var sprite = g.GetComponentInChildren<SpriteRenderer>();
+                sprite.DOFade(0, 0);
+                g.SetActive(true);
+                sprite.DOFade(1, 0.4f).SetEase(Ease.InOutSine);
+            });
             
             studyButton.SetTrigger("Study");
+            await UniTask.Delay(500);
+            
+            var sprite = player.GetComponentInChildren<SpriteRenderer>();
+            sprite.DOFade(0, 0);
+            player.SetActive(true);
+            player.GetComponent<PlayerMovement>().disable = true;
+            sprite.DOFade(1, 0.4f).SetEase(Ease.InOutSine);
+            
+            await UniTask.Delay(500);
+            menu.blocksRaycasts = false;
+            menu.interactable = false;
+            player.GetComponent<PlayerMovement>().disable = false;
         }
     }
 }

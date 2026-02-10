@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using _Project.Scripts.Interactive;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Sirenix.Utilities;
@@ -10,7 +11,7 @@ using Random = UnityEngine.Random;
 
 namespace _Project.Scripts.MiniGame
 {
-    public class Blockblast : MonoBehaviour
+    public class Blockblast : ItemView
     {
         [SerializeField] private RectTransform source;
         [SerializeField] private RectTransform grid;
@@ -25,19 +26,51 @@ namespace _Project.Scripts.MiniGame
         [SerializeField] private List<BlockblastKey> points;
         private bool[,] _shape = new bool[8, 8];
 
+        public InterActivator[] flowers;
+        public InterActivator teddy;
+
         private void Start()
         {
             _anim = GetComponent<Animator>();
             // RunGame();
         }
-
-        public async void RunGame()
+        
+        public InterItem item;
+        private int cyclegame = 3; // next cycle
+        public async override void SeeView()
         {
-            await RunCycle(1);
-            await RunCycle(2);
-            await RunCycle(3);
-            await RunCycle(4);
+            wait = true;
+            cyclegame++;
+            await RunCycle(cyclegame - 1);
+            UnseeView();
         }
+        
+        public void ReInvoke()
+        {
+            // if (cyclegame is 2 or 4) item.oneshot = false;
+            // else item.oneshot = true;
+            item.oneshot = false;
+            item.NowOneshot();
+        }
+
+        public override void UnseeView()
+        {
+            wait = false;
+            if (cyclegame is 2) flowers[0].enabled = true;
+            else if (cyclegame is 4)
+            {
+                teddy.enabled = true;
+                flowers[1].enabled = true;
+            }
+        }
+
+        // public async void RunGame()
+        // {
+        //     await RunCycle(1);
+        //     await RunCycle(2);
+        //     await RunCycle(3);
+        //     await RunCycle(4);
+        // }
 
         private Sprite[] GetPhoto(int i, bool getForSource = false)
         {
@@ -170,8 +203,8 @@ namespace _Project.Scripts.MiniGame
         {
             _cycle++;
             var randSquare = Random.Range(5, 13);
-            if (_cycle > 3 && _cycle < 4) randSquare = Random.Range(3, 11);
-            if (_cycle > 4) randSquare = Random.Range(2, 9);
+            if (_cycle > 3 && _cycle < 4) randSquare = Random.Range(4, 11);
+            if (_cycle > 4) randSquare = Random.Range(3, 10);
             var wait = tools.InitKeys(sheet, randSquare);
             await tools.GetComponent<CanvasGroup>().DOFade(0, 0).AsyncWaitForCompletion();
             tools.GetComponent<CanvasGroup>().DOFade(1f, 0.4f).SetEase(Ease.InOutSine);

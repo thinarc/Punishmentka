@@ -1,6 +1,7 @@
 using System;
 using _Project.Scripts.Player;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace _Project.Scripts.Interactive
 {
@@ -8,7 +9,7 @@ namespace _Project.Scripts.Interactive
     {
         [SerializeField] private Material extra;
         [SerializeField] private Material extraS;
-        [SerializeField] private bool oneshot;
+        public bool oneshot;
         
         private Material _selected;
         private Material _selectedS;
@@ -36,13 +37,40 @@ namespace _Project.Scripts.Interactive
 
         public static event Action doFantasyy;
 
+        public void NowOneshot()
+        {
+            if (oneshot) return;
+            oneshot = true;
+            var path = "Outline";
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                path = "BlackS/Outline";
+            }
+            _selected = Resources.Load<Material>(path);
+            _selectedS = Resources.Load<Material>(path + "S");
+            _def = Resources.Load<Material>("Sprite-Lit-Default");
+            if (extra != null) _selected = extra;
+            if (extraS != null) _selectedS = extraS;
+            
+            Sprite.material = _selected;
+            Stayed = null;
+            Stayed2 = null;
+            _used = false;
+        }
+
         private void Start()
         {
             Sprite = GetComponent<SpriteRenderer>();
             _anim = GetComponent<Animator>();
             
-            _selected = Resources.Load<Material>("Outline");
-            _selectedS = Resources.Load<Material>("OutlineS");
+            
+            var path = "Outline";
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                path = "BlackS/Outline";
+            }
+            _selected = Resources.Load<Material>(path);
+            _selectedS = Resources.Load<Material>(path + "S");
             _def = Resources.Load<Material>("Sprite-Lit-Default");
             if (extra != null) _selected = extra;
             if (extraS != null) _selectedS = extraS;

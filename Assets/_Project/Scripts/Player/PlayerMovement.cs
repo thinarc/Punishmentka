@@ -22,6 +22,8 @@ namespace _Project.Scripts.Player
 
         public Vector2 Velocity => _agent.velocity;
 
+        public bool disable;
+
         private void Start()
         {
             _agent = GetComponent<NavMeshAgent>();
@@ -30,6 +32,8 @@ namespace _Project.Scripts.Player
 
         private void Update()
         {
+            if (disable) return;
+            
             if (!Input.GetMouseButtonDown(0))
                 return;
 

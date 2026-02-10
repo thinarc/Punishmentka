@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using _Project.Scripts.MiniGame;
+using DG.Tweening;
 using UnityEngine;
 
 namespace _Project.Scripts.Interactive
@@ -8,10 +10,16 @@ namespace _Project.Scripts.Interactive
         [SerializeField] private List<InterItem> itemsToActivate;
         private List<InterItem> _itemsToActivate;
 
+        public ItemView waitView;
+        public Blockblast special;
+        public bool flower;
+        public bool teddy;
+
         private void Awake()
         {
             _itemsToActivate = new List<InterItem>();
             
+            if (teddy) return;
             itemsToActivate.ForEach(item =>
             {
                 _itemsToActivate.Add(item);
@@ -19,16 +27,48 @@ namespace _Project.Scripts.Interactive
             });
         }
 
-        private void OnUsed(InterItem item)
+        private void Update()
         {
-            item.Used -= OnUsed;
-            itemsToActivate.Remove(item);
+            if (teddy && enabled)
+            {
+                OnUsed(null);
+            }
+        }
+
+        public async void OnUsed(InterItem item)
+        {
+            if (enabled == false && flower) return;
+            if (!teddy) item.Used -= OnUsed;
+            if (!teddy) itemsToActivate.Remove(item);
 
             if (itemsToActivate.Count != 0) return;
-            GetComponent<InterItem>().enabled = true;
-            GetComponent<Collider2D>().enabled = true;
+            
+            if (waitView != null) await waitView.WaitEnd();
+            
+            if (TryGetComponent<InterItem>(out var inter)) inter.enabled = true;
+            if (TryGetComponent<Collider2D>(out var coll)) coll.enabled = true;
+            if (TryGetComponent<Animator>(out var anim)) anim.enabled = true;
+            if (flower && TryGetComponent<SpriteRenderer>(out var sr))
+            {
+                await sr.DOFade(0, 0).OnComplete(async () =>
+                {
+                    await sr.DOFade(1, 0.4f).SetEase(Ease.InOutSine).AsyncWaitForCompletion();
+                }).AsyncWaitForCompletion();
+            }
+            if (special)
+            {
+                special.ReInvoke();
+            }
             _itemsToActivate.ForEach(i =>
             {
+                if (flower)
+                {
+                    print("flower activate: " + this);
+                    i.enabled = true;
+                    i.GetComponent<Collider2D>().enabled = true;
+                    enabled = false;
+                    return;
+                }
                 i.enabled = false;
                 i.GetComponent<Collider2D>().enabled = false;
             });

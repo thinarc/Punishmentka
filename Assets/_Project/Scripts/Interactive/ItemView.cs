@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +11,7 @@ namespace _Project.Scripts.Interactive
         [SerializeField] private Image secondItem;
         [SerializeField] private CanvasGroup buttonForActivateSecondItem;
         
-        public void SeeView()
+        public virtual void SeeView()
         {
             Time.timeScale = 0f;
             var g = GetComponent<CanvasGroup>();
@@ -35,10 +36,19 @@ namespace _Project.Scripts.Interactive
                     secondItem.DOFade(1f, 0.4f).SetEase(Ease.OutSine).SetDelay(0.176f).SetUpdate(true);
                 });
             });
+            wait = true;
         }
 
-        public void UnseeView()
+        protected bool wait;
+        public async UniTask WaitEnd()
         {
+            wait = true;
+            await UniTask.WaitWhile(() => wait);
+        }
+
+        public virtual void UnseeView()
+        {
+            wait = false;
             Time.timeScale = 1f;
             var g = GetComponent<CanvasGroup>();
             g.interactable = false;
