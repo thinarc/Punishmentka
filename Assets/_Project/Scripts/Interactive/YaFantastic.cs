@@ -29,7 +29,6 @@ namespace _Project.Scripts.Interactive
             else
             {
                 _anim.SetTrigger(Shine);
-                FindAnyObjectByType<PlayerMovement>().DoFreeze(6);
                 await UniTask.Delay(2940);
                 FindAnyObjectByType<GameEntryPoint>().ChangeLight(0.62f);
             }

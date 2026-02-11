@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: adf16adc095c75c4ea80490ad906bc2f
+guid: dd856319c0b127343a702560c8fbb14b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2484065648608639905
-    second: girl-street-walk_0
+      213: -4469703498115544907
+    second: girl-fantasy-walk_0
   - first:
-      213: -3780354642307768512
-    second: girl-street-walk_1
+      213: -7305228145579792985
+    second: girl-fantasy-walk_1
   - first:
-      213: 5447261212876116261
-    second: girl-street-walk_2
+      213: -4947681590848335724
+    second: girl-fantasy-walk_2
   - first:
-      213: 4002418924329338257
-    second: girl-street-walk_3
+      213: 2740434257604536987
+    second: girl-fantasy-walk_3
   - first:
-      213: -8465750659608746161
-    second: girl-street-walk_4
+      213: -6030285050717830029
+    second: girl-fantasy-walk_4
   - first:
-      213: -5164961990488743185
-    second: girl-street-walk_5
+      213: -9200866128318859812
+    second: girl-fantasy-walk_5
   - first:
-      213: -3336895710761265030
-    second: girl-street-walk_6
+      213: -9151210357269610093
+    second: girl-fantasy-walk_6
   - first:
-      213: 5465957582691335075
-    second: girl-street-walk_7
+      213: -8829819769216779161
+    second: girl-fantasy-walk_7
   - first:
-      213: -1684693092476240819
-    second: girl-street-walk_8
+      213: 3515142088012212575
+    second: girl-fantasy-walk_8
   - first:
-      213: -8851512343262907967
-    second: girl-street-walk_9
+      213: 144270786745900679
+    second: girl-fantasy-walk_9
   - first:
-      213: -699228051427858248
-    second: girl-street-walk_10
+      213: 9014822529125049597
+    second: girl-fantasy-walk_10
   - first:
-      213: 5683459382585150227
-    second: girl-street-walk_11
+      213: -453897029770904930
+    second: girl-fantasy-walk_11
   - first:
-      213: -63570052462721606
-    second: girl-street-walk_12
+      213: 2862923709179316565
+    second: girl-fantasy-walk_12
   - first:
-      213: -8109818641214496321
-    second: girl-street-walk_13
+      213: 5198842303085125127
+    second: girl-fantasy-walk_13
   - first:
-      213: 234643786216860390
-    second: girl-street-walk_14
+      213: 8192183159250288924
+    second: girl-fantasy-walk_14
   - first:
-      213: 4658833872937154629
-    second: girl-street-walk_15
+      213: 274145482179447028
+    second: girl-fantasy-walk_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -158,13 +158,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: girl-street-walk_0
+      name: girl-fantasy-walk_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 72
-        width: 14
-        height: 22
+        x: 7
+        y: 96
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f548ee72473d68dd0800000000000000
-      internalID: -2484065648608639905
+      spriteID: 5b88087995c68f1c0800000000000000
+      internalID: -4469703498115544907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_1
+      name: girl-fantasy-walk_1
       rect:
         serializedVersion: 2
-        x: 29
-        y: 72
-        width: 14
-        height: 23
+        x: 39
+        y: 96
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 04f1f346b7b798bc0800000000000000
-      internalID: -3780354642307768512
+      spriteID: 7a5e783d4bd9e9a90800000000000000
+      internalID: -7305228145579792985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_2
+      name: girl-fantasy-walk_2
       rect:
         serializedVersion: 2
-        x: 53
-        y: 72
-        width: 14
-        height: 22
+        x: 71
+        y: 96
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5219e38563f889b40800000000000000
-      internalID: 5447261212876116261
+      spriteID: 490debb9ecd465bb0800000000000000
+      internalID: -4947681590848335724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_3
+      name: girl-fantasy-walk_3
       rect:
         serializedVersion: 2
-        x: 77
-        y: 72
-        width: 14
-        height: 23
+        x: 103
+        y: 96
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19583f25ec27b8730800000000000000
-      internalID: 4002418924329338257
+      spriteID: b9a64d6107af70620800000000000000
+      internalID: 2740434257604536987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_4
+      name: girl-fantasy-walk_4
       rect:
         serializedVersion: 2
-        x: 5
-        y: 48
-        width: 14
-        height: 22
+        x: 7
+        y: 64
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +261,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f47edf8e0ac938a80800000000000000
-      internalID: -8465750659608746161
+      spriteID: 3748d9932bf105ca0800000000000000
+      internalID: -6030285050717830029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_5
+      name: girl-fantasy-walk_5
       rect:
         serializedVersion: 2
-        x: 29
-        y: 48
-        width: 14
-        height: 23
+        x: 39
+        y: 64
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,20 +283,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe2268e4f6e5258b0800000000000000
-      internalID: -5164961990488743185
+      spriteID: cd571ab2105ff4080800000000000000
+      internalID: -9200866128318859812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_6
+      name: girl-fantasy-walk_6
       rect:
         serializedVersion: 2
-        x: 53
-        y: 48
-        width: 14
-        height: 22
+        x: 71
+        y: 64
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a78dc8bd707f0b1d0800000000000000
-      internalID: -3336895710761265030
+      spriteID: 391c11e4aae500180800000000000000
+      internalID: -9151210357269610093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_7
+      name: girl-fantasy-walk_7
       rect:
         serializedVersion: 2
-        x: 77
-        y: 48
-        width: 14
-        height: 23
+        x: 103
+        y: 64
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,20 +327,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ab7ba9267bfadb40800000000000000
-      internalID: 5465957582691335075
+      spriteID: 76cbc19c3bd267580800000000000000
+      internalID: -8829819769216779161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_8
+      name: girl-fantasy-walk_8
       rect:
         serializedVersion: 2
-        x: 5
-        y: 24
-        width: 14
-        height: 22
+        x: 7
+        y: 32
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,20 +349,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4c366bee84ce98e0800000000000000
-      internalID: -1684693092476240819
+      spriteID: f592ef2ea1b48c030800000000000000
+      internalID: 3515142088012212575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_9
+      name: girl-fantasy-walk_9
       rect:
         serializedVersion: 2
-        x: 29
-        y: 24
-        width: 14
-        height: 23
+        x: 39
+        y: 32
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,20 +371,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c134decb6c192580800000000000000
-      internalID: -8851512343262907967
+      spriteID: 78e9473248d800200800000000000000
+      internalID: 144270786745900679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_10
+      name: girl-fantasy-walk_10
       rect:
         serializedVersion: 2
-        x: 53
-        y: 24
-        width: 14
-        height: 22
+        x: 71
+        y: 32
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,20 +393,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b867a9bac7db46f0800000000000000
-      internalID: -699228051427858248
+      spriteID: df4efa1e3551b1d70800000000000000
+      internalID: 9014822529125049597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_11
+      name: girl-fantasy-walk_11
       rect:
         serializedVersion: 2
-        x: 77
-        y: 24
-        width: 14
-        height: 23
+        x: 103
+        y: 32
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,20 +415,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 31b495a3234bfde40800000000000000
-      internalID: 5683459382585150227
+      spriteID: e9a76e76e0f63b9f0800000000000000
+      internalID: -453897029770904930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_12
+      name: girl-fantasy-walk_12
       rect:
         serializedVersion: 2
-        x: 5
+        x: 7
         y: 0
-        width: 14
-        height: 22
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,20 +437,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab54b94cf572e1ff0800000000000000
-      internalID: -63570052462721606
+      spriteID: 5594da0f1f52bb720800000000000000
+      internalID: 2862923709179316565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_13
+      name: girl-fantasy-walk_13
       rect:
         serializedVersion: 2
-        x: 29
+        x: 39
         y: 0
-        width: 14
-        height: 23
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,20 +459,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb1a199d9e2247f80800000000000000
-      internalID: -8109818641214496321
+      spriteID: 70e99aea78ff52840800000000000000
+      internalID: 5198842303085125127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_14
+      name: girl-fantasy-walk_14
       rect:
         serializedVersion: 2
-        x: 53
+        x: 71
         y: 0
-        width: 14
-        height: 22
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,20 +481,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ea6536c74f914300800000000000000
-      internalID: 234643786216860390
+      spriteID: c110d06ed2b70b170800000000000000
+      internalID: 8192183159250288924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_15
+      name: girl-fantasy-walk_15
       rect:
         serializedVersion: 2
-        x: 77
+        x: 103
         y: 0
-        width: 14
-        height: 23
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -503,8 +503,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 548f9ff49b087a040800000000000000
-      internalID: 4658833872937154629
+      spriteID: 4f885121dd5fdc300800000000000000
+      internalID: 274145482179447028
       vertices: []
       indices: 
       edges: []
@@ -513,7 +513,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 726dd8916337aec4c8125c1e7ff69fe3
+    spriteID: 30486bde6353c2c479651110201655d9
     internalID: 0
     vertices: []
     indices: 
@@ -523,22 +523,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      girl-street-walk_0: -2484065648608639905
-      girl-street-walk_1: -3780354642307768512
-      girl-street-walk_10: -699228051427858248
-      girl-street-walk_11: 5683459382585150227
-      girl-street-walk_12: -63570052462721606
-      girl-street-walk_13: -8109818641214496321
-      girl-street-walk_14: 234643786216860390
-      girl-street-walk_15: 4658833872937154629
-      girl-street-walk_2: 5447261212876116261
-      girl-street-walk_3: 4002418924329338257
-      girl-street-walk_4: -8465750659608746161
-      girl-street-walk_5: -5164961990488743185
-      girl-street-walk_6: -3336895710761265030
-      girl-street-walk_7: 5465957582691335075
-      girl-street-walk_8: -1684693092476240819
-      girl-street-walk_9: -8851512343262907967
+      girl-fantasy-walk_0: -4469703498115544907
+      girl-fantasy-walk_1: -7305228145579792985
+      girl-fantasy-walk_10: 9014822529125049597
+      girl-fantasy-walk_11: -453897029770904930
+      girl-fantasy-walk_12: 2862923709179316565
+      girl-fantasy-walk_13: 5198842303085125127
+      girl-fantasy-walk_14: 8192183159250288924
+      girl-fantasy-walk_15: 274145482179447028
+      girl-fantasy-walk_2: -4947681590848335724
+      girl-fantasy-walk_3: 2740434257604536987
+      girl-fantasy-walk_4: -6030285050717830029
+      girl-fantasy-walk_5: -9200866128318859812
+      girl-fantasy-walk_6: -9151210357269610093
+      girl-fantasy-walk_7: -8829819769216779161
+      girl-fantasy-walk_8: 3515142088012212575
+      girl-fantasy-walk_9: 144270786745900679
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

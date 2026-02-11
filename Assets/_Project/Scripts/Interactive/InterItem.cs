@@ -37,15 +37,14 @@ namespace _Project.Scripts.Interactive
 
         public static event Action doFantasyy;
 
+        [Space(10)] public bool black;
+
         public void NowOneshot()
         {
             if (oneshot) return;
             oneshot = true;
             var path = "Outline";
-            if (SceneManager.GetActiveScene().buildIndex == 1)
-            {
-                path = "BlackS/Outline";
-            }
+            if (black) path = "BlackS/Outline";
             _selected = Resources.Load<Material>(path);
             _selectedS = Resources.Load<Material>(path + "S");
             _def = Resources.Load<Material>("Sprite-Lit-Default");
@@ -65,10 +64,7 @@ namespace _Project.Scripts.Interactive
             
             
             var path = "Outline";
-            if (SceneManager.GetActiveScene().buildIndex == 1)
-            {
-                path = "BlackS/Outline";
-            }
+            if (black) path = "BlackS/Outline";
             _selected = Resources.Load<Material>(path);
             _selectedS = Resources.Load<Material>(path + "S");
             _def = Resources.Load<Material>("Sprite-Lit-Default");

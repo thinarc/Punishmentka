@@ -19,9 +19,15 @@ namespace _Project.Scripts.Player
         
         private Vector2 _target;
 
-        public Vector2 Velocity => _agent.velocity;
+        public Vector2 Velocity => GetVelocity();
 
         public bool disable;
+        
+        private Vector2 GetVelocity()
+        {
+            if (_agent == null) _agent = GetComponent<NavMeshAgent>();
+            return _agent.velocity;
+        }
 
         private void Start()
         {
@@ -63,21 +69,6 @@ namespace _Project.Scripts.Player
 
             return pos.x >= 0 && pos.x <= Screen.width &&
                    pos.y >= 0 && pos.y <= Screen.height;
-        }
-
-        public async void DoFreeze(float d)
-        {
-            _agent.speed = _startSpeed / 10f;
-            await UniTask.Delay(TimeSpan.FromSeconds(d / 4));
-            _agent.speed = _startSpeed / 7.4f;
-            await UniTask.Delay(TimeSpan.FromSeconds(d / 4));
-            _agent.speed = _startSpeed / 4f;
-            await UniTask.Delay(TimeSpan.FromSeconds(d / 4));
-            _agent.speed = _startSpeed / 2f;
-            await UniTask.Delay(TimeSpan.FromSeconds(d / 4));
-            _agent.speed = _startSpeed;
-            
-            ResetTarget();
         }
 
         public void ResetTarget() => _agent.ResetPath();

@@ -15,6 +15,7 @@ namespace _Project.Scripts.Interactive
         public Blockblast special;
         public bool flower;
         public bool teddy;
+        public bool door;
 
         private void Awake()
         {
@@ -48,7 +49,8 @@ namespace _Project.Scripts.Interactive
             
             if (TryGetComponent<Collider2D>(out var coll)) coll.enabled = true;
             if (TryGetComponent<Animator>(out var anim)) anim.enabled = true;
-            if (teddy) await UniTask.Delay(940);
+            if (teddy && !door) await UniTask.Delay(940);
+            else if (door) await UniTask.Delay(540);
             if (TryGetComponent<InterItem>(out var inter)) inter.enabled = true;
             if (flower && TryGetComponent<SpriteRenderer>(out var sr))
             {

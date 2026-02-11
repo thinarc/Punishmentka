@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using NavMeshPlus.Extensions;
@@ -35,16 +36,19 @@ namespace _Project.Scripts.EntryPoints
 
         private int _lastOnStart = -100;
 
-        private void Start()
+        private async void Start()
         {
             _targetIntensity = globals[0].intensity;
             
             if (!Application.isPlaying) return;
-            ChangeScene();
+            ChangeScene(true);
             states.ForEach(s =>
             {
                 if (s.onStart) SoundManager.instance.PlayClip(s.sound);
             });
+            
+            // await UniTask.Delay(2000);
+            // DoChangeScene(1);
         }
 
         private void Update()
@@ -63,8 +67,37 @@ namespace _Project.Scripts.EntryPoints
             volumeCamera[0].profile = profiles[2];
         }
         
-        private void ChangeScene()
+        public async void DoChangeScene(int index) // 1 - fantasy; 2 - final
         {
+            if (index < 0 || index >= states.Count) return;
+            if (states[index].onStart) return;
+            if (!Application.isPlaying) return;
+            
+            await WorldChangerEffect.instance.StartMenu();
+            
+            states.ForEach(s => s.onStart = false);
+            states[index].onStart = true;
+            ChangeScene(out var render, out var meshes);
+            SoundManager.instance.PlayClip(states[index].sound);
+
+            await WorldChangerEffect.instance.DoUndoMenu(render, meshes);
+        }
+
+        private void ChangeScene(bool auto)
+        {
+            if (auto)
+            {
+                ChangeScene(out var render, out var viewsNoUsed);
+                viewsNoUsed[0].sharedMaterial = render[0];
+                viewsNoUsed[1].sharedMaterial = render[1];
+            }
+        }
+        
+        private void ChangeScene(out Material[] render, out MeshRenderer[] views)
+        {
+            var r = Array.Empty<Material>();
+            var v = Array.Empty<MeshRenderer>();
+            
             states.ForEach(s =>
             {
                 s.scene.SetActive(false);
@@ -92,13 +125,12 @@ namespace _Project.Scripts.EntryPoints
                 if (volumeCamera[1].gameObject.activeInHierarchy) volumeCamera[1].gameObject.SetActive(false);
                 volumeCamera[0].profile = profiles[vol];
                 volumeCamera[1].profile = null;
+                
                 var renderMaterialsIndex = 0;
                 if (isChangedView) renderMaterialsIndex = 2;
-                if (worldView.sharedMaterial != renderMaterials[renderMaterialsIndex])
-                {
-                    worldView.sharedMaterial = renderMaterials[renderMaterialsIndex];
-                    worldViewRep.sharedMaterial = renderMaterials[renderMaterialsIndex + 1];
-                }
+                r = new Material[2] { renderMaterials[renderMaterialsIndex], renderMaterials[renderMaterialsIndex + 1] };
+                v = new MeshRenderer[2] { worldView,  worldViewRep };
+                
                 var scale = worldViewData.localScale;
                 var pos = worldViewData.position;
                 if (isChangedView) scale = worldViewSmallData.localScale;
@@ -113,6 +145,9 @@ namespace _Project.Scripts.EntryPoints
                 if (!skipMenu && s.scene.name == "Home") menuInterface.SetActive(true);
                 else menuInterface.SetActive(false);
             });
+
+            render = r;
+            views = v;
             
             if (!Application.isPlaying) return;
             states.ForEach(s =>
@@ -152,7 +187,7 @@ namespace _Project.Scripts.EntryPoints
             
             UnityEditor.EditorApplication.delayCall += () =>
             {
-                if (this != null) ChangeScene();
+                if (this != null) ChangeScene(true);
             };
         }
 #endif

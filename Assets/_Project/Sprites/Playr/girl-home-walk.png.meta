@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: b465bc17f512d6646bf72bf932f4d13c
+guid: bd06bcbe4c0d3c0468d8866b150a53c8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3829257485750920502
-    second: girl-home-sheet_0
+      213: -16844256786687924
+    second: girl-home-walk_0
   - first:
-      213: -2337736072889987758
-    second: girl-home-sheet_1
+      213: -1455791516599162049
+    second: girl-home-walk_1
   - first:
-      213: -7908855818613147868
-    second: girl-home-sheet_2
+      213: 395015587329173727
+    second: girl-home-walk_2
   - first:
-      213: -8198204119460880015
-    second: girl-home-sheet_3
+      213: -8974030476873783708
+    second: girl-home-walk_3
   - first:
-      213: -5215337212816144512
-    second: girl-home-sheet_4
+      213: -820855410185726387
+    second: girl-home-walk_4
   - first:
-      213: 4520923533499873055
-    second: girl-home-sheet_5
+      213: 830040270688862922
+    second: girl-home-walk_5
   - first:
-      213: -9035707416118002108
-    second: girl-home-sheet_6
+      213: -2716535701673589783
+    second: girl-home-walk_6
   - first:
-      213: -6191731344264591678
-    second: girl-home-sheet_7
+      213: 1435486148464002974
+    second: girl-home-walk_7
   - first:
-      213: -4226768938350690635
-    second: girl-home-sheet_8
+      213: -6816593531749144838
+    second: girl-home-walk_8
   - first:
-      213: 4919168771036489651
-    second: girl-home-sheet_9
+      213: -3613362188738875532
+    second: girl-home-walk_9
   - first:
-      213: 8925602516087779568
-    second: girl-home-sheet_10
+      213: -6718866494032699862
+    second: girl-home-walk_10
   - first:
-      213: -3422306793461429022
-    second: girl-home-sheet_11
+      213: -3271507457688333314
+    second: girl-home-walk_11
   - first:
-      213: -5505332719349398609
-    second: girl-home-sheet_12
+      213: 2775139833579010169
+    second: girl-home-walk_12
   - first:
-      213: -9002882443709057140
-    second: girl-home-sheet_13
+      213: 7557669375873423760
+    second: girl-home-walk_13
   - first:
-      213: 6270158877532771655
-    second: girl-home-sheet_14
+      213: 8492818212536488440
+    second: girl-home-walk_14
   - first:
-      213: -6813051965619262019
-    second: girl-home-sheet_15
+      213: -8242440091978459945
+    second: girl-home-walk_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -158,13 +158,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: girl-home-sheet_0
+      name: girl-home-walk_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 95
-        width: 19
-        height: 30
+        x: 7
+        y: 96
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63560bf1561442530800000000000000
-      internalID: 3829257485750920502
+      spriteID: c4859b9dc3824cff0800000000000000
+      internalID: -16844256786687924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_1
+      name: girl-home-walk_1
       rect:
         serializedVersion: 2
-        x: 38
-        y: 95
-        width: 19
-        height: 30
+        x: 39
+        y: 96
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25d86c47d61be8fd0800000000000000
-      internalID: -2337736072889987758
+      spriteID: f3b641a245dfbcbe0800000000000000
+      internalID: -1455791516599162049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_2
+      name: girl-home-walk_2
       rect:
         serializedVersion: 2
-        x: 70
-        y: 95
-        width: 19
-        height: 30
+        x: 71
+        y: 96
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42738cf29891e3290800000000000000
-      internalID: -7908855818613147868
+      spriteID: fd86f7375906b7500800000000000000
+      internalID: 395015587329173727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_3
+      name: girl-home-walk_3
       rect:
         serializedVersion: 2
-        x: 102
-        y: 95
-        width: 19
-        height: 30
+        x: 103
+        y: 96
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 171e36f0ac02a3e80800000000000000
-      internalID: -8198204119460880015
+      spriteID: 466a866e3d6d57380800000000000000
+      internalID: -8974030476873783708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_4
+      name: girl-home-walk_4
       rect:
         serializedVersion: 2
-        x: 6
-        y: 63
-        width: 19
-        height: 30
+        x: 7
+        y: 64
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +261,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 087c73edf666f97b0800000000000000
-      internalID: -5215337212816144512
+      spriteID: d461cef7a5cbb94f0800000000000000
+      internalID: -820855410185726387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_5
+      name: girl-home-walk_5
       rect:
         serializedVersion: 2
-        x: 38
-        y: 63
-        width: 19
-        height: 30
+        x: 39
+        y: 64
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,20 +283,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f17b6f6300c8dbe30800000000000000
-      internalID: 4520923533499873055
+      spriteID: ac2cdab7a35e48b00800000000000000
+      internalID: 830040270688862922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_6
+      name: girl-home-walk_6
       rect:
         serializedVersion: 2
-        x: 70
-        y: 63
-        width: 19
-        height: 30
+        x: 71
+        y: 64
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 44e7cef6af7ba9280800000000000000
-      internalID: -9035707416118002108
+      spriteID: 9e344121c2dec4ad0800000000000000
+      internalID: -2716535701673589783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_7
+      name: girl-home-walk_7
       rect:
         serializedVersion: 2
-        x: 102
-        y: 63
-        width: 19
-        height: 30
+        x: 103
+        y: 64
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,20 +327,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2c60578c52d821aa0800000000000000
-      internalID: -6191731344264591678
+      spriteID: e97c037eb0fdbe310800000000000000
+      internalID: 1435486148464002974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_8
+      name: girl-home-walk_8
       rect:
         serializedVersion: 2
-        x: 6
-        y: 31
-        width: 19
-        height: 30
+        x: 7
+        y: 32
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,20 +349,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5beb3f18b008755c0800000000000000
-      internalID: -4226768938350690635
+      spriteID: af6edd97c489661a0800000000000000
+      internalID: -6816593531749144838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_9
+      name: girl-home-walk_9
       rect:
         serializedVersion: 2
-        x: 38
-        y: 31
-        width: 19
-        height: 30
+        x: 39
+        y: 32
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,20 +371,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b723d33fe5644440800000000000000
-      internalID: 4919168771036489651
+      spriteID: 47f2467db32caddc0800000000000000
+      internalID: -3613362188738875532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_10
+      name: girl-home-walk_10
       rect:
         serializedVersion: 2
-        x: 70
-        y: 31
-        width: 19
-        height: 30
+        x: 71
+        y: 32
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,20 +393,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f0beb1d23c1edb70800000000000000
-      internalID: 8925602516087779568
+      spriteID: a2e18e1958ac1c2a0800000000000000
+      internalID: -6718866494032699862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_11
+      name: girl-home-walk_11
       rect:
         serializedVersion: 2
-        x: 102
-        y: 31
-        width: 19
-        height: 30
+        x: 103
+        y: 32
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,20 +415,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ec435f7a168180d0800000000000000
-      internalID: -3422306793461429022
+      spriteID: ef31278ec454992d0800000000000000
+      internalID: -3271507457688333314
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_12
+      name: girl-home-walk_12
       rect:
         serializedVersion: 2
-        x: 6
+        x: 7
         y: 0
-        width: 19
-        height: 29
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,20 +437,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa308dc6f012993b0800000000000000
-      internalID: -5505332719349398609
+      spriteID: 978738ea9f6438620800000000000000
+      internalID: 2775139833579010169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_13
+      name: girl-home-walk_13
       rect:
         serializedVersion: 2
-        x: 38
+        x: 39
         y: 0
-        width: 19
-        height: 29
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,20 +459,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c87fe14ed165f0380800000000000000
-      internalID: -9002882443709057140
+      spriteID: 09998ce414c32e860800000000000000
+      internalID: 7557669375873423760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_14
+      name: girl-home-walk_14
       rect:
         serializedVersion: 2
-        x: 70
+        x: 71
         y: 0
-        width: 19
-        height: 29
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,20 +481,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7455a944744140750800000000000000
-      internalID: 6270158877532771655
+      spriteID: 8f1943cda2d8cd570800000000000000
+      internalID: 8492818212536488440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-home-sheet_15
+      name: girl-home-walk_15
       rect:
         serializedVersion: 2
-        x: 102
+        x: 103
         y: 0
-        width: 19
-        height: 29
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -503,8 +503,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dbdacf8955d2371a0800000000000000
-      internalID: -6813051965619262019
+      spriteID: 7d49f2b1868fc9d80800000000000000
+      internalID: -8242440091978459945
       vertices: []
       indices: 
       edges: []
@@ -513,7 +513,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7a0aa12740f405a4d8ebfe2924209a88
     internalID: 0
     vertices: []
     indices: 
@@ -523,22 +523,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      girl-home-sheet_0: 3829257485750920502
-      girl-home-sheet_1: -2337736072889987758
-      girl-home-sheet_10: 8925602516087779568
-      girl-home-sheet_11: -3422306793461429022
-      girl-home-sheet_12: -5505332719349398609
-      girl-home-sheet_13: -9002882443709057140
-      girl-home-sheet_14: 6270158877532771655
-      girl-home-sheet_15: -6813051965619262019
-      girl-home-sheet_2: -7908855818613147868
-      girl-home-sheet_3: -8198204119460880015
-      girl-home-sheet_4: -5215337212816144512
-      girl-home-sheet_5: 4520923533499873055
-      girl-home-sheet_6: -9035707416118002108
-      girl-home-sheet_7: -6191731344264591678
-      girl-home-sheet_8: -4226768938350690635
-      girl-home-sheet_9: 4919168771036489651
+      girl-home-walk_0: -16844256786687924
+      girl-home-walk_1: -1455791516599162049
+      girl-home-walk_10: -6718866494032699862
+      girl-home-walk_11: -3271507457688333314
+      girl-home-walk_12: 2775139833579010169
+      girl-home-walk_13: 7557669375873423760
+      girl-home-walk_14: 8492818212536488440
+      girl-home-walk_15: -8242440091978459945
+      girl-home-walk_2: 395015587329173727
+      girl-home-walk_3: -8974030476873783708
+      girl-home-walk_4: -820855410185726387
+      girl-home-walk_5: 830040270688862922
+      girl-home-walk_6: -2716535701673589783
+      girl-home-walk_7: 1435486148464002974
+      girl-home-walk_8: -6816593531749144838
+      girl-home-walk_9: -3613362188738875532
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WorldBlur
+  m_Name: WorldChange
   m_Shader: {fileID: 4800000, guid: 0803c241834332942abfcbd27c498b46, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -302,7 +302,7 @@ Material:
     - _HologramMinAlpha: 0.2
     - _Hue: 0
     - _InkSpreadContrast: 0.24
-    - _InkSpreadDistance: -2.1107767
+    - _InkSpreadDistance: -5
     - _InkSpreadFade: 0.92
     - _InkSpreadNoiseFactor: 5
     - _InkSpreadWidth: 0.2

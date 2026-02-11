@@ -1,12 +1,10 @@
 using System;
-using System.Linq;
 using _Project.Scripts.Player;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Sirenix.Utilities;
 using UnityEngine;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 namespace _Project.Scripts.EntryPoints
 {

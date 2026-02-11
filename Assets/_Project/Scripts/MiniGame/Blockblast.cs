@@ -29,6 +29,7 @@ namespace _Project.Scripts.MiniGame
 
         public InterActivator[] flowers;
         public InterActivator teddy;
+        public InterActivator door;
 
         private void Start()
         {
@@ -37,7 +38,7 @@ namespace _Project.Scripts.MiniGame
         }
         
         public InterItem item;
-        private int cyclegame = 1; // next cycle
+        private int cyclegame = 4; // next cycle
         public async override void SeeView()
         {
             if (specialDesk)
@@ -75,6 +76,10 @@ namespace _Project.Scripts.MiniGame
             {
                 teddy.enabled = true;
                 flowers[1].enabled = true;
+            }
+            else if (cyclegame is 5) // in fact 6
+            {
+                door.enabled = true;
             }
         }
 

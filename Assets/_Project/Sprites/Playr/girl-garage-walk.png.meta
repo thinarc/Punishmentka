@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: adf16adc095c75c4ea80490ad906bc2f
+guid: 8de179176808dab4f87603f133b6a80b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2484065648608639905
-    second: girl-street-walk_0
+      213: -894790126549764502
+    second: girl-garage-walk_0
   - first:
-      213: -3780354642307768512
-    second: girl-street-walk_1
+      213: 7907093599686481883
+    second: girl-garage-walk_1
   - first:
-      213: 5447261212876116261
-    second: girl-street-walk_2
+      213: -6966817874162176841
+    second: girl-garage-walk_2
   - first:
-      213: 4002418924329338257
-    second: girl-street-walk_3
+      213: -5368041721526802957
+    second: girl-garage-walk_3
   - first:
-      213: -8465750659608746161
-    second: girl-street-walk_4
+      213: 6112674736251305346
+    second: girl-garage-walk_4
   - first:
-      213: -5164961990488743185
-    second: girl-street-walk_5
+      213: -8237155660216981489
+    second: girl-garage-walk_5
   - first:
-      213: -3336895710761265030
-    second: girl-street-walk_6
+      213: -3613757365824887494
+    second: girl-garage-walk_6
   - first:
-      213: 5465957582691335075
-    second: girl-street-walk_7
+      213: -7591913894231762039
+    second: girl-garage-walk_7
   - first:
-      213: -1684693092476240819
-    second: girl-street-walk_8
+      213: 8638158685194561702
+    second: girl-garage-walk_8
   - first:
-      213: -8851512343262907967
-    second: girl-street-walk_9
+      213: -175142893936083023
+    second: girl-garage-walk_9
   - first:
-      213: -699228051427858248
-    second: girl-street-walk_10
+      213: 301106400641806910
+    second: girl-garage-walk_10
   - first:
-      213: 5683459382585150227
-    second: girl-street-walk_11
+      213: -3057974907274616238
+    second: girl-garage-walk_11
   - first:
-      213: -63570052462721606
-    second: girl-street-walk_12
+      213: -8941210120190296269
+    second: girl-garage-walk_12
   - first:
-      213: -8109818641214496321
-    second: girl-street-walk_13
+      213: -7937697762898893106
+    second: girl-garage-walk_13
   - first:
-      213: 234643786216860390
-    second: girl-street-walk_14
+      213: -3006181772354487491
+    second: girl-garage-walk_14
   - first:
-      213: 4658833872937154629
-    second: girl-street-walk_15
+      213: -2691312789704331968
+    second: girl-garage-walk_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -158,13 +158,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: girl-street-walk_0
+      name: girl-garage-walk_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 72
-        width: 14
-        height: 22
+        x: 7
+        y: 96
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f548ee72473d68dd0800000000000000
-      internalID: -2484065648608639905
+      spriteID: a667976ee111593f0800000000000000
+      internalID: -894790126549764502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_1
+      name: girl-garage-walk_1
       rect:
         serializedVersion: 2
-        x: 29
-        y: 72
-        width: 14
-        height: 23
+        x: 39
+        y: 96
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 04f1f346b7b798bc0800000000000000
-      internalID: -3780354642307768512
+      spriteID: bd7d31f3cb3abbd60800000000000000
+      internalID: 7907093599686481883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_2
+      name: girl-garage-walk_2
       rect:
         serializedVersion: 2
-        x: 53
-        y: 72
-        width: 14
-        height: 22
+        x: 71
+        y: 96
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5219e38563f889b40800000000000000
-      internalID: 5447261212876116261
+      spriteID: 7bca8b32e04e05f90800000000000000
+      internalID: -6966817874162176841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_3
+      name: girl-garage-walk_3
       rect:
         serializedVersion: 2
-        x: 77
-        y: 72
-        width: 14
-        height: 23
+        x: 103
+        y: 96
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19583f25ec27b8730800000000000000
-      internalID: 4002418924329338257
+      spriteID: 3f52be0de72e085b0800000000000000
+      internalID: -5368041721526802957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_4
+      name: girl-garage-walk_4
       rect:
         serializedVersion: 2
-        x: 5
-        y: 48
-        width: 14
-        height: 22
+        x: 7
+        y: 64
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +261,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f47edf8e0ac938a80800000000000000
-      internalID: -8465750659608746161
+      spriteID: 28d73c9494594d450800000000000000
+      internalID: 6112674736251305346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_5
+      name: girl-garage-walk_5
       rect:
         serializedVersion: 2
-        x: 29
-        y: 48
-        width: 14
-        height: 23
+        x: 39
+        y: 64
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,20 +283,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe2268e4f6e5258b0800000000000000
-      internalID: -5164961990488743185
+      spriteID: f082b21c19ebfad80800000000000000
+      internalID: -8237155660216981489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_6
+      name: girl-garage-walk_6
       rect:
         serializedVersion: 2
-        x: 53
-        y: 48
-        width: 14
-        height: 22
+        x: 71
+        y: 64
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a78dc8bd707f0b1d0800000000000000
-      internalID: -3336895710761265030
+      spriteID: a356e8182da59ddc0800000000000000
+      internalID: -3613757365824887494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_7
+      name: girl-garage-walk_7
       rect:
         serializedVersion: 2
-        x: 77
-        y: 48
-        width: 14
-        height: 23
+        x: 103
+        y: 64
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,20 +327,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ab7ba9267bfadb40800000000000000
-      internalID: 5465957582691335075
+      spriteID: 98b96f0798a14a690800000000000000
+      internalID: -7591913894231762039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_8
+      name: girl-garage-walk_8
       rect:
         serializedVersion: 2
-        x: 5
-        y: 24
-        width: 14
-        height: 22
+        x: 7
+        y: 32
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,20 +349,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4c366bee84ce98e0800000000000000
-      internalID: -1684693092476240819
+      spriteID: 6a82a78ae87e0e770800000000000000
+      internalID: 8638158685194561702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_9
+      name: girl-garage-walk_9
       rect:
         serializedVersion: 2
-        x: 29
-        y: 24
-        width: 14
-        height: 23
+        x: 39
+        y: 32
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,20 +371,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c134decb6c192580800000000000000
-      internalID: -8851512343262907967
+      spriteID: 1bf71064774c19df0800000000000000
+      internalID: -175142893936083023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_10
+      name: girl-garage-walk_10
       rect:
         serializedVersion: 2
-        x: 53
-        y: 24
-        width: 14
-        height: 22
+        x: 71
+        y: 32
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,20 +393,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b867a9bac7db46f0800000000000000
-      internalID: -699228051427858248
+      spriteID: e32f9d11daebd2400800000000000000
+      internalID: 301106400641806910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_11
+      name: girl-garage-walk_11
       rect:
         serializedVersion: 2
-        x: 77
-        y: 24
-        width: 14
-        height: 23
+        x: 103
+        y: 32
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,20 +415,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 31b495a3234bfde40800000000000000
-      internalID: 5683459382585150227
+      spriteID: 252a6df0604ef85d0800000000000000
+      internalID: -3057974907274616238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_12
+      name: girl-garage-walk_12
       rect:
         serializedVersion: 2
-        x: 5
+        x: 7
         y: 0
-        width: 14
-        height: 22
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,20 +437,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab54b94cf572e1ff0800000000000000
-      internalID: -63570052462721606
+      spriteID: 33ffdeba4c07ae380800000000000000
+      internalID: -8941210120190296269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_13
+      name: girl-garage-walk_13
       rect:
         serializedVersion: 2
-        x: 29
+        x: 39
         y: 0
-        width: 14
-        height: 23
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,20 +459,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb1a199d9e2247f80800000000000000
-      internalID: -8109818641214496321
+      spriteID: ec6affbb0f1a7d190800000000000000
+      internalID: -7937697762898893106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_14
+      name: girl-garage-walk_14
       rect:
         serializedVersion: 2
-        x: 53
+        x: 71
         y: 0
-        width: 14
-        height: 22
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,20 +481,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ea6536c74f914300800000000000000
-      internalID: 234643786216860390
+      spriteID: d3b7e800b95e746d0800000000000000
+      internalID: -3006181772354487491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-street-walk_15
+      name: girl-garage-walk_15
       rect:
         serializedVersion: 2
-        x: 77
+        x: 103
         y: 0
-        width: 14
-        height: 23
+        width: 17
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -503,8 +503,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 548f9ff49b087a040800000000000000
-      internalID: 4658833872937154629
+      spriteID: 04d2536e64986aad0800000000000000
+      internalID: -2691312789704331968
       vertices: []
       indices: 
       edges: []
@@ -513,7 +513,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 726dd8916337aec4c8125c1e7ff69fe3
+    spriteID: ee629ecd0931b4742a73e436e9cc4d6d
     internalID: 0
     vertices: []
     indices: 
@@ -523,22 +523,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      girl-street-walk_0: -2484065648608639905
-      girl-street-walk_1: -3780354642307768512
-      girl-street-walk_10: -699228051427858248
-      girl-street-walk_11: 5683459382585150227
-      girl-street-walk_12: -63570052462721606
-      girl-street-walk_13: -8109818641214496321
-      girl-street-walk_14: 234643786216860390
-      girl-street-walk_15: 4658833872937154629
-      girl-street-walk_2: 5447261212876116261
-      girl-street-walk_3: 4002418924329338257
-      girl-street-walk_4: -8465750659608746161
-      girl-street-walk_5: -5164961990488743185
-      girl-street-walk_6: -3336895710761265030
-      girl-street-walk_7: 5465957582691335075
-      girl-street-walk_8: -1684693092476240819
-      girl-street-walk_9: -8851512343262907967
+      girl-garage-walk_0: -894790126549764502
+      girl-garage-walk_1: 7907093599686481883
+      girl-garage-walk_10: 301106400641806910
+      girl-garage-walk_11: -3057974907274616238
+      girl-garage-walk_12: -8941210120190296269
+      girl-garage-walk_13: -7937697762898893106
+      girl-garage-walk_14: -3006181772354487491
+      girl-garage-walk_15: -2691312789704331968
+      girl-garage-walk_2: -6966817874162176841
+      girl-garage-walk_3: -5368041721526802957
+      girl-garage-walk_4: 6112674736251305346
+      girl-garage-walk_5: -8237155660216981489
+      girl-garage-walk_6: -3613757365824887494
+      girl-garage-walk_7: -7591913894231762039
+      girl-garage-walk_8: 8638158685194561702
+      girl-garage-walk_9: -175142893936083023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

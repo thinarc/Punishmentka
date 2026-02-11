@@ -250,7 +250,7 @@ Material:
     - _EnchantedRainbowSpeed: 0.5
     - _EnchantedRainbowToggle: 0
     - _EnchantedReduce: 0
-    - _FadingFade: 1
+    - _FadingFade: 0
     - _FadingNoiseFactor: 0.2
     - _FadingWidth: 0.3
     - _FlameBrightness: 10
@@ -269,7 +269,7 @@ Material:
     - _FullDistortionFade: 1
     - _FullGlowDissolveFade: 0.5
     - _FullGlowDissolveWidth: 0.5
-    - _GaussianBlurFade: 1
+    - _GaussianBlurFade: 0
     - _GaussianBlurOffset: 0.5
     - _GlitchBrightness: 4
     - _GlitchFade: 1
@@ -291,7 +291,7 @@ Material:
     - _HologramMinAlpha: 0.2
     - _Hue: 0
     - _InkSpreadContrast: 2
-    - _InkSpreadDistance: -4.9988713
+    - _InkSpreadDistance: -4.3692546
     - _InkSpreadFade: 0.8868637
     - _InkSpreadNoiseFactor: 0.5
     - _InkSpreadWidth: 0.2
