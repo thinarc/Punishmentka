@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using _Project.Scripts.MiniGame;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 
@@ -45,9 +46,10 @@ namespace _Project.Scripts.Interactive
             
             if (waitView != null) await waitView.WaitEnd();
             
-            if (TryGetComponent<InterItem>(out var inter)) inter.enabled = true;
             if (TryGetComponent<Collider2D>(out var coll)) coll.enabled = true;
             if (TryGetComponent<Animator>(out var anim)) anim.enabled = true;
+            if (teddy) await UniTask.Delay(940);
+            if (TryGetComponent<InterItem>(out var inter)) inter.enabled = true;
             if (flower && TryGetComponent<SpriteRenderer>(out var sr))
             {
                 await sr.DOFade(0, 0).OnComplete(async () =>
@@ -55,7 +57,7 @@ namespace _Project.Scripts.Interactive
                     await sr.DOFade(1, 0.4f).SetEase(Ease.InOutSine).AsyncWaitForCompletion();
                 }).AsyncWaitForCompletion();
             }
-            if (special)
+            if (special && !teddy)
             {
                 special.ReInvoke();
             }
@@ -63,7 +65,6 @@ namespace _Project.Scripts.Interactive
             {
                 if (flower)
                 {
-                    print("flower activate: " + this);
                     i.enabled = true;
                     i.GetComponent<Collider2D>().enabled = true;
                     enabled = false;

@@ -1,3 +1,4 @@
+using _Project.Scripts.Player;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
@@ -10,8 +11,10 @@ namespace _Project.Scripts.Interactive
         [Header("Extra")]
         [SerializeField] private Image secondItem;
         [SerializeField] private CanvasGroup buttonForActivateSecondItem;
+
+        public bool specialDesk;
         
-        public virtual void SeeView()
+        public async virtual void SeeView()
         {
             Time.timeScale = 0f;
             var g = GetComponent<CanvasGroup>();

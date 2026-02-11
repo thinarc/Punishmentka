@@ -18,7 +18,6 @@ namespace _Project.Scripts.Player
         private float _startSpeed;
         
         private Vector2 _target;
-        private bool _hasTarget;
 
         public Vector2 Velocity => _agent.velocity;
 
@@ -28,6 +27,14 @@ namespace _Project.Scripts.Player
         {
             _agent = GetComponent<NavMeshAgent>();
             _startSpeed = _agent.speed;
+        }
+
+        public void SetTarget(Vector2 target)
+        {
+            _target = target;
+            _agent.SetDestination(_target);
+            targetParticle.transform.position = _target;
+            targetParticle.Play();
         }
 
         private void Update()

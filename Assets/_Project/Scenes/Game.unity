@@ -32202,7 +32202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6901961}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -32253,6 +32253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondItem: {fileID: 0}
   buttonForActivateSecondItem: {fileID: 0}
+  specialDesk: 1
   source: {fileID: 1086694462}
   grid: {fileID: 1815560517}
   cellSize: 0.125
@@ -39743,7 +39744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5254902}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6901961}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -39794,6 +39795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondItem: {fileID: 220366896}
   buttonForActivateSecondItem: {fileID: 1266949613}
+  specialDesk: 0
 --- !u!114 &1368433834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48384,7 +48386,7 @@ GameObject:
   - component: {fileID: 1697104747}
   - component: {fileID: 1697104746}
   - component: {fileID: 1697104748}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: teddybear._0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48432,11 +48434,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 439433985
-  m_SortingLayer: 1
-  m_SortingOrder: 2
+  m_SortingLayerID: 715954417
+  m_SortingLayer: 3
+  m_SortingOrder: 47
   m_Sprite: {fileID: 8725215492126109167, guid: a25321f2f1eb50346b20767533d02cb9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -48455,7 +48457,7 @@ Transform:
   m_GameObject: {fileID: 1697104743}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.34375, y: -0.03125, z: 0}
+  m_LocalPosition: {x: 0, y: 1.123, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48509,12 +48511,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac1990360cc470bbe5ad13d72220f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  extra: {fileID: 0}
-  extraS: {fileID: 0}
+  extra: {fileID: 2100000, guid: a804f4cb74071c3408e1c1fd5ea2b1a2, type: 2}
+  extraS: {fileID: 2100000, guid: c1b61ac47f33b0c4c9b068fd94398e8c, type: 2}
   oneshot: 1
   appliedSprite: {fileID: 0}
   realFantasy: 0
-  uiView: {fileID: 0}
+  uiView: {fileID: 1697104749}
 --- !u!95 &1697104748
 Animator:
   serializedVersion: 7
@@ -48523,9 +48525,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697104743}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 915ee95641abaa640abacbfe0b115334, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4f50f164918e3904eb1843104bad5963, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -48549,6 +48551,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79a3763d5e7dcef4e862b21483b6be63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  secondItem: {fileID: 0}
+  buttonForActivateSecondItem: {fileID: 0}
+  specialDesk: 0
+  special: {fileID: 1141996378}
+  specialObject: {fileID: 1713309335}
 --- !u!114 &1697104750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54448,7 +54455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5254902}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6901961}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -54479,6 +54486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondItem: {fileID: 1476703541}
   buttonForActivateSecondItem: {fileID: 1360837485}
+  specialDesk: 0
 --- !u!222 &1954718140
 CanvasRenderer:
   m_ObjectHideFlags: 0

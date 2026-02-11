@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using _Project.Scripts.Interactive;
+using _Project.Scripts.Player;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Sirenix.Utilities;
@@ -36,9 +37,19 @@ namespace _Project.Scripts.MiniGame
         }
         
         public InterItem item;
-        private int cyclegame = 3; // next cycle
+        private int cyclegame = 1; // next cycle
         public async override void SeeView()
         {
+            if (specialDesk)
+            {
+                var player = FindAnyObjectByType<PlayerMovement>();
+                player.disable = true;
+                player.SetTarget(new Vector2(0.41f, -0.56f));
+                await UniTask.Delay(2000);
+                player.SetTarget(new Vector2(0.14f, -0.52f));
+                await UniTask.Delay(200);
+            }
+            
             wait = true;
             cyclegame++;
             await RunCycle(cyclegame - 1);
@@ -55,6 +66,9 @@ namespace _Project.Scripts.MiniGame
 
         public override void UnseeView()
         {
+            var player = FindAnyObjectByType<PlayerMovement>();
+            player.disable = false;
+            
             wait = false;
             if (cyclegame is 2) flowers[0].enabled = true;
             else if (cyclegame is 4)
