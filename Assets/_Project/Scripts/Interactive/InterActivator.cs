@@ -16,6 +16,7 @@ namespace _Project.Scripts.Interactive
         public bool flower;
         public bool teddy;
         public bool door;
+        public bool spider;
 
         private void Awake()
         {
@@ -52,6 +53,7 @@ namespace _Project.Scripts.Interactive
             if (teddy && !door) await UniTask.Delay(940);
             else if (door) await UniTask.Delay(540);
             if (TryGetComponent<InterItem>(out var inter)) inter.enabled = true;
+            if (spider) anim.SetTrigger("Shine");
             if (flower && TryGetComponent<SpriteRenderer>(out var sr))
             {
                 await sr.DOFade(0, 0).OnComplete(async () =>

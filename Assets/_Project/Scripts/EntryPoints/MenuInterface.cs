@@ -44,7 +44,7 @@ namespace _Project.Scripts.EntryPoints
             }
         }
 
-        public async void StartMenu()
+        public async UniTask StartMenu()
         {
             texture.material = blur;
             
@@ -57,6 +57,8 @@ namespace _Project.Scripts.EntryPoints
             logoRect.DOScale(1, 0.64f).SetEase(Ease.OutBack);
             await logo.DOFade(1, 0.8f).SetEase(Ease.InOutSine).AsyncWaitForCompletion();
             menu.DOFade(1, 0.44f).SetEase(Ease.InOutSine);
+
+            await UniTask.WaitWhile(() => menu.blocksRaycasts);
         }
 
         public async UniTask UndoMaterial()

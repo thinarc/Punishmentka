@@ -22,7 +22,12 @@ public class SimpleConfiner2D : MonoBehaviour
         Vector3 desiredPos = target.position;
         desiredPos.z = transform.position.z;
 
-        transform.position = Confine(desiredPos);
+        if (target.gameObject.activeInHierarchy == false)
+        {
+            desiredPos.x = -0.75f;
+            transform.position = desiredPos;
+        }
+        else transform.position = Confine(desiredPos);
     }
 
     private Vector3 Confine(Vector3 position)

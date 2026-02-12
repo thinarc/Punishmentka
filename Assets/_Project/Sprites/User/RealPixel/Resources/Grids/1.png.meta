@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: efe955c12f04bf6429472099142d3c84
+guid: 2270e9a12631c4d48a4c173166419373
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7482177786666212508
-    second: Monster_0
+      213: 4113829005332862926
+    second: 9_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 64
     resizeAlgorithm: 0
-    textureFormat: 12
+    textureFormat: 10
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MonsterGrid_0
+      name: 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,21 +121,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea999986ca6c67e4ca528982e1d2c7be
-      internalID: 536028184
+      spriteID: e9e76c5dd9c41c94384ae4c451edd31c
+      internalID: -846604743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_1
+      name: 1_1
       rect:
         serializedVersion: 2
         x: 8
@@ -143,21 +143,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0329aec4788bbde469707d0a0bb71a34
-      internalID: -151182135
+      spriteID: 26c897302593e3746bcd3fe62b7a6493
+      internalID: -106900076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_2
+      name: 1_2
       rect:
         serializedVersion: 2
         x: 16
@@ -165,21 +165,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db674acd6e67c894d93295c48a45de6e
-      internalID: -559992642
+      spriteID: 5c15ae5019fd910438713d26202d3846
+      internalID: 496478389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_3
+      name: 1_3
       rect:
         serializedVersion: 2
         x: 24
@@ -187,21 +187,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10d035814cbf94d40bba095c54201456
-      internalID: -1166988028
+      spriteID: 2f524f88399ab554e9d763b9caa800c0
+      internalID: -967847053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_4
+      name: 1_4
       rect:
         serializedVersion: 2
         x: 32
@@ -209,21 +209,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98e49de34121cc348bcb933757d42a3a
-      internalID: 1410111780
+      spriteID: d33c51952a3dbff4586461a2276536c2
+      internalID: -427794240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_5
+      name: 1_5
       rect:
         serializedVersion: 2
         x: 40
@@ -231,21 +231,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ab895cb41ff4da4d994e2c4e6d6916e
-      internalID: -1323562734
+      spriteID: 16b5a8663459a214480ac59a3118ca9e
+      internalID: -389422663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_6
+      name: 1_6
       rect:
         serializedVersion: 2
         x: 48
@@ -253,21 +253,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f27ffd6431830f7499aed37a55d99920
-      internalID: 1452860992
+      spriteID: 8ee8fb3c38069e34aa8246e2baa1ca20
+      internalID: -1078616438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_7
+      name: 1_7
       rect:
         serializedVersion: 2
         x: 56
@@ -275,21 +275,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f098c76ffd4bab448a4d173d598dffe5
-      internalID: 1062910689
+      spriteID: 9bb2cbbdf8a9dc449958d2433bec89da
+      internalID: 1471531404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_8
+      name: 1_8
       rect:
         serializedVersion: 2
         x: 0
@@ -297,21 +297,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91110ca823758194ca66fa58825a49dd
-      internalID: -44185901
+      spriteID: 913ef1b45c2071d41a951ff39d09a5c2
+      internalID: 540081012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_9
+      name: 1_9
       rect:
         serializedVersion: 2
         x: 8
@@ -319,21 +319,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 309e3618fa63e1d49ac6f51c24416a97
-      internalID: 608437775
+      spriteID: 34183e6f00b413d439f254302f9bf8fd
+      internalID: 1937734522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_10
+      name: 1_10
       rect:
         serializedVersion: 2
         x: 16
@@ -341,21 +341,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7139e202806454a429f4dee7f6365a27
-      internalID: -936583746
+      spriteID: 4c4a72f0f5542c24cbcabe723d3b2d5a
+      internalID: -703639260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_11
+      name: 1_11
       rect:
         serializedVersion: 2
         x: 24
@@ -363,21 +363,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48784fd200e73f84d8cdd7626196d5f8
-      internalID: -147149053
+      spriteID: 19483f778e1b8064386b2a0d1eee0ddf
+      internalID: 1461926891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_12
+      name: 1_12
       rect:
         serializedVersion: 2
         x: 32
@@ -385,21 +385,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 805170441b4458c4f836e64ad9500408
-      internalID: -1277212641
+      spriteID: 92829c9ae4dea6b4ea5ae73f3c2700f5
+      internalID: 512960830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_13
+      name: 1_13
       rect:
         serializedVersion: 2
         x: 40
@@ -407,21 +407,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f22339f6e71d5d847aa3b303d31c0ce7
-      internalID: 1992210811
+      spriteID: 39a172ab3e6357e4d99dd05b36000e36
+      internalID: -1030946778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_14
+      name: 1_14
       rect:
         serializedVersion: 2
         x: 48
@@ -429,21 +429,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bb69b3d64089c04da09a0a89fd720cf
-      internalID: 254978203
+      spriteID: 2debef3301486ec49ab5de5cbeb0b574
+      internalID: 1152942196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_15
+      name: 1_15
       rect:
         serializedVersion: 2
         x: 56
@@ -451,21 +451,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f81833183a3d84d4d926b917b54ce884
-      internalID: -1398283134
+      spriteID: 655976e834446bc4a8bbbeeb274ef3bb
+      internalID: 1826381605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_16
+      name: 1_16
       rect:
         serializedVersion: 2
         x: 0
@@ -473,21 +473,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21325da19a4b22c46be71cff540aa7f9
-      internalID: -1691525928
+      spriteID: c6a1b674fd5b8394381d5bcea97e8b7a
+      internalID: -2135770642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_17
+      name: 1_17
       rect:
         serializedVersion: 2
         x: 8
@@ -495,21 +495,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb6c85b9cf0974242a9e61a19c799982
-      internalID: 2140218659
+      spriteID: ecec13ba0a5e765428aed53a8b0152ce
+      internalID: 1175984916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_18
+      name: 1_18
       rect:
         serializedVersion: 2
         x: 16
@@ -517,21 +517,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a52e5b10f13d44c44ad0a6d3c64db72e
-      internalID: 1706103109
+      spriteID: 0d81e2b7a2280e24b8d6de0ccc082615
+      internalID: -1817619479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_19
+      name: 1_19
       rect:
         serializedVersion: 2
         x: 24
@@ -539,21 +539,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e74dff9249ad8946b3253651a584037
-      internalID: 1681588357
+      spriteID: 4790582a04499604e890ccb63659fef7
+      internalID: -781554575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_20
+      name: 1_20
       rect:
         serializedVersion: 2
         x: 32
@@ -561,21 +561,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c33394cbfa1b264da4f5276191c41ba
-      internalID: 1429044615
+      spriteID: ecce063b64a7f2f41ad59a05f28569e5
+      internalID: 535191090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_21
+      name: 1_21
       rect:
         serializedVersion: 2
         x: 40
@@ -583,21 +583,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc22e72c90152e3459713d2ee639be9d
-      internalID: -65076539
+      spriteID: ec0caabd07a86e146b6e7f26010ef52c
+      internalID: 432835720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_22
+      name: 1_22
       rect:
         serializedVersion: 2
         x: 48
@@ -605,21 +605,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9572a77b4477d44091fb5586900cda6
-      internalID: 1274655250
+      spriteID: c346a90438d075546aa84ff0632f566b
+      internalID: -1333948009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_23
+      name: 1_23
       rect:
         serializedVersion: 2
         x: 56
@@ -627,21 +627,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30b94833d4d0a154082467bc71be57f3
-      internalID: 1951341293
+      spriteID: 3a41c9cef34011c4d9c77a45c320a01c
+      internalID: -633655811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_24
+      name: 1_24
       rect:
         serializedVersion: 2
         x: 0
@@ -649,21 +649,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32cb856295ec082459db3684f164ba26
-      internalID: -1349915032
+      spriteID: d4dd3e0c41bc2f2479467b85ca521e43
+      internalID: 2137893210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_25
+      name: 1_25
       rect:
         serializedVersion: 2
         x: 8
@@ -671,21 +671,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c017dbc81810dd438203ab3907d3c4a
-      internalID: -1010938512
+      spriteID: 269b7693cc26f054391293328c249d07
+      internalID: -203972863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_26
+      name: 1_26
       rect:
         serializedVersion: 2
         x: 16
@@ -693,21 +693,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 770af13191e8278418225479798744c6
-      internalID: 1449860856
+      spriteID: 091b1d2134e6e5b43a6f468862e6b2f6
+      internalID: -520975390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_27
+      name: 1_27
       rect:
         serializedVersion: 2
         x: 24
@@ -715,21 +715,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c397685e9eaf40a4fb2c73841ffa0332
-      internalID: 1776940535
+      spriteID: e747f2ef117a6c6498517b5d9bae2469
+      internalID: 191669923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_28
+      name: 1_28
       rect:
         serializedVersion: 2
         x: 32
@@ -737,21 +737,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2407bc8042f8b74db2c04d96f1b9349
-      internalID: 2055691460
+      spriteID: 50959fa721514c946b663ac8e7c05083
+      internalID: 1456219763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_29
+      name: 1_29
       rect:
         serializedVersion: 2
         x: 40
@@ -759,21 +759,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20dfffbced34d864fa4c6dbfe667dbdd
-      internalID: 206056817
+      spriteID: 3b23af4cf53e11a4f9207e7b59f5748f
+      internalID: -1800682402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_30
+      name: 1_30
       rect:
         serializedVersion: 2
         x: 48
@@ -781,21 +781,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e18d3a3b049a354e91f67cf0bc964dc
-      internalID: -1319850121
+      spriteID: caa869b9cd135a748aa6075a6430076c
+      internalID: 1366395374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_31
+      name: 1_31
       rect:
         serializedVersion: 2
         x: 56
@@ -803,21 +803,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7be4f83fd9e4bb24f87fb574a6317141
-      internalID: 1378563191
+      spriteID: 1a8624f68ed841a4b9548f3bb9631ca4
+      internalID: 1146601033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_32
+      name: 1_32
       rect:
         serializedVersion: 2
         x: 0
@@ -825,21 +825,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81755fe61c71b2e4a861106e616b4124
-      internalID: 760998005
+      spriteID: d6ee38de7a716dc4c96745bf8ac073bc
+      internalID: 1525970282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_33
+      name: 1_33
       rect:
         serializedVersion: 2
         x: 8
@@ -847,21 +847,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acd0eedeeb5fa914cbaef0cd99b56656
-      internalID: 1932433193
+      spriteID: 0505ba51523cfc7408268bc9e85dfeff
+      internalID: -2093676301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_34
+      name: 1_34
       rect:
         serializedVersion: 2
         x: 16
@@ -869,21 +869,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee650edd10424da4ca717afd945df686
-      internalID: 621059730
+      spriteID: 81de9527853726f43a0cbc57cd0b132c
+      internalID: -441409477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_35
+      name: 1_35
       rect:
         serializedVersion: 2
         x: 24
@@ -891,21 +891,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2de7294278626340a381693fe6fb08e
-      internalID: -1026793039
+      spriteID: 8aa11c904bcbc684d8e468f930e01795
+      internalID: 727583502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_36
+      name: 1_36
       rect:
         serializedVersion: 2
         x: 32
@@ -913,21 +913,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcc179fb17fe6754790443202b1bd1e4
-      internalID: 1133437835
+      spriteID: 7f66c16f0f305ab4a8211119b1721672
+      internalID: -71865686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_37
+      name: 1_37
       rect:
         serializedVersion: 2
         x: 40
@@ -935,21 +935,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a9c84218e18f174d930f574b44c7130
-      internalID: 1302995090
+      spriteID: 1b23134b83b672944b3714fc9feafdd9
+      internalID: 1738897224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_38
+      name: 1_38
       rect:
         serializedVersion: 2
         x: 48
@@ -957,21 +957,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9f9b21c126c22d4292f4643ed2d412b
-      internalID: -856138138
+      spriteID: 548feae44deb6df4ebe5e42f277f8e1e
+      internalID: -2033058607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_39
+      name: 1_39
       rect:
         serializedVersion: 2
         x: 56
@@ -979,21 +979,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 112d861af48f7864d88f708028f251bf
-      internalID: 390552889
+      spriteID: 50db8eba866530648a132ac7bae91553
+      internalID: -996226894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_40
+      name: 1_40
       rect:
         serializedVersion: 2
         x: 0
@@ -1001,21 +1001,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0897d6491ceb7842a59629013c879bb
-      internalID: 544045366
+      spriteID: 507e97c7f3a6fdb4c90b8b9dfa0b7d63
+      internalID: 1659198109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_41
+      name: 1_41
       rect:
         serializedVersion: 2
         x: 8
@@ -1023,21 +1023,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70fea94ad8357fc43822f941491a8aae
-      internalID: -55563731
+      spriteID: c19ff032d8ac1214d81f6c2c27036129
+      internalID: 463624082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_42
+      name: 1_42
       rect:
         serializedVersion: 2
         x: 16
@@ -1045,21 +1045,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccb03bb5b74c38c47850a9016ae536e7
-      internalID: -1387960726
+      spriteID: 26c3122bbd442c4458a83643b648c905
+      internalID: 888610019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_43
+      name: 1_43
       rect:
         serializedVersion: 2
         x: 24
@@ -1067,21 +1067,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c560150dbccc9749ad01516704c6277
-      internalID: -1811003925
+      spriteID: 8b1d2a245303b28448c3d6a7fb6de736
+      internalID: 1106727702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_44
+      name: 1_44
       rect:
         serializedVersion: 2
         x: 32
@@ -1089,21 +1089,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaeb46a19b869f546b73d8b2a7bb97c5
-      internalID: -1833197393
+      spriteID: b829f21e3b29ef54ba90a35136afba05
+      internalID: -50429544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_45
+      name: 1_45
       rect:
         serializedVersion: 2
         x: 40
@@ -1111,21 +1111,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d41cd7bd69ddbdd49bd10b95e16c4fed
-      internalID: -885824420
+      spriteID: 88eabadf80b3e104a8ee4fb19ed846e1
+      internalID: -277316853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_46
+      name: 1_46
       rect:
         serializedVersion: 2
         x: 48
@@ -1133,21 +1133,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c98b145d2e9a064eacadefffac7e1f8
-      internalID: -1185452731
+      spriteID: 13877c6f7a790d448b5aa46a20884f9b
+      internalID: 2076478240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_47
+      name: 1_47
       rect:
         serializedVersion: 2
         x: 56
@@ -1155,21 +1155,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd341e6b5df993743924488fbdfa0951
-      internalID: 155227768
+      spriteID: 1c291e2f32bfcc24db8e69a4053589e6
+      internalID: -896951809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_48
+      name: 1_48
       rect:
         serializedVersion: 2
         x: 0
@@ -1177,21 +1177,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7278ff05b1ea0049804ed9e3f5dfda8
-      internalID: -441018283
+      spriteID: 9e5d2b016fbf3f24095417906512e696
+      internalID: -2072149059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_49
+      name: 1_49
       rect:
         serializedVersion: 2
         x: 8
@@ -1199,21 +1199,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0988f70bdb919384bab13cfa33c0caad
-      internalID: 16582281
+      spriteID: a4ff3ce576983fa44858d9cbe5a0d234
+      internalID: 943687935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_50
+      name: 1_50
       rect:
         serializedVersion: 2
         x: 16
@@ -1221,21 +1221,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9a069a57130d7348bd16adcc66d9d9a
-      internalID: 2022392764
+      spriteID: 855acd04d6022d8428b46c9cadde3741
+      internalID: -1300738387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_51
+      name: 1_51
       rect:
         serializedVersion: 2
         x: 24
@@ -1243,21 +1243,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f24ddca9c0120e42b5436d24fcbd00a
-      internalID: 1742620183
+      spriteID: 065f0b638772f2245ade1fbf58e9be41
+      internalID: -1496593796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_52
+      name: 1_52
       rect:
         serializedVersion: 2
         x: 32
@@ -1265,21 +1265,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 442adc01896c1f84b95acd50a8524931
-      internalID: 141880113
+      spriteID: 7090f52addc38354f90d9baad568e813
+      internalID: -511516096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_53
+      name: 1_53
       rect:
         serializedVersion: 2
         x: 40
@@ -1287,21 +1287,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 427556b05db5d7a499eae30e3e48fc2e
-      internalID: 1557726183
+      spriteID: 9599b9ef8234d4149a5196c8523a8e8d
+      internalID: -1960846395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_54
+      name: 1_54
       rect:
         serializedVersion: 2
         x: 48
@@ -1309,21 +1309,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a79ceaa656211ae47ae0d12d8b1dcb7e
-      internalID: -729912220
+      spriteID: de511907000421c4e8fba3ea8906d180
+      internalID: 2003358887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_55
+      name: 1_55
       rect:
         serializedVersion: 2
         x: 56
@@ -1331,21 +1331,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b61edf9133a6d56439711425827ff6f5
-      internalID: 812526875
+      spriteID: ab3ebcd280ef4214f966e7b70bafda97
+      internalID: -1672865031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_56
+      name: 1_56
       rect:
         serializedVersion: 2
         x: 0
@@ -1353,21 +1353,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b265d23dc77bf73489856969c6ae150f
-      internalID: 1082284815
+      spriteID: bebb2db4fc09bbb41a5871646d5b08bf
+      internalID: -963942437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_57
+      name: 1_57
       rect:
         serializedVersion: 2
         x: 8
@@ -1375,21 +1375,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cefa46db4170dce4da94270ea6ab1e5d
-      internalID: -1343471157
+      spriteID: ce4d489303e34ea4aae92848f7bed647
+      internalID: 692814081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_58
+      name: 1_58
       rect:
         serializedVersion: 2
         x: 16
@@ -1397,21 +1397,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70e6ca9b5d8058c4189212486ae7ef7c
-      internalID: -792262675
+      spriteID: f11552fde137cf44abf45f3deee73416
+      internalID: -1186026983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_59
+      name: 1_59
       rect:
         serializedVersion: 2
         x: 24
@@ -1419,21 +1419,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19fc31059b3e0094fba5c461b07dea29
-      internalID: 77496612
+      spriteID: 7fb7efef241b4f342bce0258f4122497
+      internalID: 1343612948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_60
+      name: 1_60
       rect:
         serializedVersion: 2
         x: 32
@@ -1441,21 +1441,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe426f16211e43d4997a24dee65d2c12
-      internalID: -467872006
+      spriteID: a211518a5d8512d4e9846dc193a94880
+      internalID: -132713944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_61
+      name: 1_61
       rect:
         serializedVersion: 2
         x: 40
@@ -1463,21 +1463,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b6a7f6965251e440a9c37d72e4804ce
-      internalID: 1981020267
+      spriteID: 1bde666970bc7034c96f46e677b210e5
+      internalID: -952326239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_62
+      name: 1_62
       rect:
         serializedVersion: 2
         x: 48
@@ -1485,21 +1485,21 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 468632a6b32c97545bf68866909b59f9
-      internalID: 678784599
+      spriteID: e40ca61a5cd623a4cbc4eb3ec1e11a4d
+      internalID: -1500669133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterGrid_63
+      name: 1_63
       rect:
         serializedVersion: 2
         x: 56
@@ -1507,15 +1507,15 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddaa4d8db66f8c142ab81b1df6551fdf
-      internalID: 220064007
+      spriteID: 556543c9edfe4304e8a2d8a21da6426f
+      internalID: -22408648
       vertices: []
       indices: 
       edges: []
@@ -1524,7 +1524,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ad8275b6476c9f64bb52c949eab81913
+    spriteID: c13913e8b522d1a4cb69b6925639018d
     internalID: 0
     vertices: []
     indices: 
@@ -1534,70 +1534,70 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MonsterGrid_0: 536028184
-      MonsterGrid_1: -151182135
-      MonsterGrid_10: -936583746
-      MonsterGrid_11: -147149053
-      MonsterGrid_12: -1277212641
-      MonsterGrid_13: 1992210811
-      MonsterGrid_14: 254978203
-      MonsterGrid_15: -1398283134
-      MonsterGrid_16: -1691525928
-      MonsterGrid_17: 2140218659
-      MonsterGrid_18: 1706103109
-      MonsterGrid_19: 1681588357
-      MonsterGrid_2: -559992642
-      MonsterGrid_20: 1429044615
-      MonsterGrid_21: -65076539
-      MonsterGrid_22: 1274655250
-      MonsterGrid_23: 1951341293
-      MonsterGrid_24: -1349915032
-      MonsterGrid_25: -1010938512
-      MonsterGrid_26: 1449860856
-      MonsterGrid_27: 1776940535
-      MonsterGrid_28: 2055691460
-      MonsterGrid_29: 206056817
-      MonsterGrid_3: -1166988028
-      MonsterGrid_30: -1319850121
-      MonsterGrid_31: 1378563191
-      MonsterGrid_32: 760998005
-      MonsterGrid_33: 1932433193
-      MonsterGrid_34: 621059730
-      MonsterGrid_35: -1026793039
-      MonsterGrid_36: 1133437835
-      MonsterGrid_37: 1302995090
-      MonsterGrid_38: -856138138
-      MonsterGrid_39: 390552889
-      MonsterGrid_4: 1410111780
-      MonsterGrid_40: 544045366
-      MonsterGrid_41: -55563731
-      MonsterGrid_42: -1387960726
-      MonsterGrid_43: -1811003925
-      MonsterGrid_44: -1833197393
-      MonsterGrid_45: -885824420
-      MonsterGrid_46: -1185452731
-      MonsterGrid_47: 155227768
-      MonsterGrid_48: -441018283
-      MonsterGrid_49: 16582281
-      MonsterGrid_5: -1323562734
-      MonsterGrid_50: 2022392764
-      MonsterGrid_51: 1742620183
-      MonsterGrid_52: 141880113
-      MonsterGrid_53: 1557726183
-      MonsterGrid_54: -729912220
-      MonsterGrid_55: 812526875
-      MonsterGrid_56: 1082284815
-      MonsterGrid_57: -1343471157
-      MonsterGrid_58: -792262675
-      MonsterGrid_59: 77496612
-      MonsterGrid_6: 1452860992
-      MonsterGrid_60: -467872006
-      MonsterGrid_61: 1981020267
-      MonsterGrid_62: 678784599
-      MonsterGrid_63: 220064007
-      MonsterGrid_7: 1062910689
-      MonsterGrid_8: -44185901
-      MonsterGrid_9: 608437775
+      1_0: -846604743
+      1_1: -106900076
+      1_10: -703639260
+      1_11: 1461926891
+      1_12: 512960830
+      1_13: -1030946778
+      1_14: 1152942196
+      1_15: 1826381605
+      1_16: -2135770642
+      1_17: 1175984916
+      1_18: -1817619479
+      1_19: -781554575
+      1_2: 496478389
+      1_20: 535191090
+      1_21: 432835720
+      1_22: -1333948009
+      1_23: -633655811
+      1_24: 2137893210
+      1_25: -203972863
+      1_26: -520975390
+      1_27: 191669923
+      1_28: 1456219763
+      1_29: -1800682402
+      1_3: -967847053
+      1_30: 1366395374
+      1_31: 1146601033
+      1_32: 1525970282
+      1_33: -2093676301
+      1_34: -441409477
+      1_35: 727583502
+      1_36: -71865686
+      1_37: 1738897224
+      1_38: -2033058607
+      1_39: -996226894
+      1_4: -427794240
+      1_40: 1659198109
+      1_41: 463624082
+      1_42: 888610019
+      1_43: 1106727702
+      1_44: -50429544
+      1_45: -277316853
+      1_46: 2076478240
+      1_47: -896951809
+      1_48: -2072149059
+      1_49: 943687935
+      1_5: -389422663
+      1_50: -1300738387
+      1_51: -1496593796
+      1_52: -511516096
+      1_53: -1960846395
+      1_54: 2003358887
+      1_55: -1672865031
+      1_56: -963942437
+      1_57: 692814081
+      1_58: -1186026983
+      1_59: 1343612948
+      1_6: -1078616438
+      1_60: -132713944
+      1_61: -952326239
+      1_62: -1500669133
+      1_63: -22408648
+      1_7: 1471531404
+      1_8: 540081012
+      1_9: 1937734522
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

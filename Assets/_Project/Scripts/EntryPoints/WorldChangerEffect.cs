@@ -22,19 +22,24 @@ namespace _Project.Scripts.EntryPoints
         
         [ReadOnly, Space(5)] public List<GameObject> upLayersToHide;
         [ReadOnly] public List<GameObject> upLayersToShow;
-
-        [ReadOnly, Space(5)] public int numberUsage;
         
         private float inkSpread = 15f;
         private bool inkSpeadAnim;
         
-        private async UniTask BeforeMenu()
+        public RenderTexture normalView;
+        public RenderTexture smallView;
+        
+        private async UniTask BeforeMenu(bool toStreet = false)
         {
+            texture.sharedMaterial.SetTexture("_MainTex", normalView);
             upLayersToHide.ForEach(g =>
             {
                 if (g == null) throw new Exception("Null in upLayersToHide");
                 if (g.TryGetComponent<PlayerMovement>(out var player)) player.disable = true;
-                g.GetComponentInChildren<SpriteRenderer>().DOFade(0, 0.44f).SetEase(Ease.InOutSine).OnComplete(() => g.SetActive(false));
+                if (g.name == "New3" && g.transform.parent.TryGetComponent<Animator>(out var anim))
+                    anim.enabled = false;
+                g.GetComponentInChildren<SpriteRenderer>().DOFade(0, 0.44f).SetEase(Ease.InOutSine)
+                    .OnComplete(() => g.SetActive(false));
             });
             upLayersToShow.ForEach(g =>
             {
@@ -46,14 +51,18 @@ namespace _Project.Scripts.EntryPoints
 
             // await UniTask.Delay(120);
             await ChangeEffect(1);
+            
+            if (toStreet)
+            {
+                texture.sharedMaterial.SetTexture("_MainTex", smallView);
+            }
         }
 
-        public async UniTask StartMenu()
+        public async UniTask StartMenu(int numberUsage)
         {
             upLayersToHide ??= new List<GameObject>();
             upLayersToShow ??= new List<GameObject>();
             
-            numberUsage++;
             upLayersToHide.Clear();
             upLayersToShow.Clear();
             switch (numberUsage)
@@ -75,12 +84,13 @@ namespace _Project.Scripts.EntryPoints
             texture.sharedMaterial.SetFloat("_InkSpreadDistance", -5f);
             texture.sharedMaterial.SetFloat("_FadingFade", 0);
             texture.sharedMaterial.SetFloat("_GaussianBlurFade", 0);
-            await BeforeMenu();
+            if (numberUsage == 2) await BeforeMenu(true);
+            else await BeforeMenu();
         }
 
-        public async UniTask DoUndoMenu(Material[] render, MeshRenderer[] meshes)
+        public async UniTask DoUndoMenu(Material[] render, MeshRenderer[] meshes, int index)
         {
-            await UndoMenu(render, meshes);
+            await UndoMenu(render, meshes, index);
         }
 
         private async UniTask ChangeEffect(float target)
@@ -120,8 +130,8 @@ namespace _Project.Scripts.EntryPoints
                 return !Mathf.Approximately(val, target);
             });
         }
-
-        private async UniTask UndoMenu(Material[] newMats, MeshRenderer[] appliedMeshes)
+        
+        private async UniTask UndoMenu(Material[] newMats, MeshRenderer[] appliedMeshes, int index)
         {
             await UniTask.Delay(400);
             inkSpeadAnim = true;
@@ -130,6 +140,16 @@ namespace _Project.Scripts.EntryPoints
             texture = appliedMeshes[0];
             texture.sharedMaterial = newMats[0];
             appliedMeshes[1].sharedMaterial = newMats[1];
+            if (index == 2)
+            {
+                texture.sharedMaterial.SetTexture("_MainTex", smallView);
+                appliedMeshes[1].sharedMaterial.SetTexture("_MainTex", smallView);
+            }
+            else
+            {
+                texture.sharedMaterial.SetTexture("_MainTex", normalView);
+                appliedMeshes[1].sharedMaterial.SetTexture("_MainTex", normalView);
+            }
             var player = upLayersToShow[0];
             upLayersToShow[0] = null;
             upLayersToShow.ForEach(g =>

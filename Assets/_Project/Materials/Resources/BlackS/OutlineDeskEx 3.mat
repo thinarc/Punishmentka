@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutlineExtra(small) 2
+  m_Name: OutlineDeskEx 3
   m_Shader: {fileID: 4800000, guid: a36b7719ff0465b42ab1407d67672c5f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -74,7 +74,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _OutlineDistortTex:
         m_Texture: {fileID: 2800000, guid: 7aad8c583ef292e48b06af0d1f2fab97, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 1.1, y: -0.46}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
         m_Texture: {fileID: 2800000, guid: 2c5f648e215789a4599c67843b5f7e9a, type: 3}
@@ -181,11 +181,11 @@ Material:
     - _OffsetUvY: 0
     - _OnlyInnerOutline: 0
     - _OnlyOutline: 0
-    - _OutlineAlpha: 0.92
-    - _OutlineDistortAmount: 0.32
+    - _OutlineAlpha: 0.74
+    - _OutlineDistortAmount: 1.02
     - _OutlineDistortTexXSpeed: 0
-    - _OutlineDistortTexYSpeed: 4
-    - _OutlineGlow: 1.5
+    - _OutlineDistortTexYSpeed: 1.92
+    - _OutlineGlow: 1.8
     - _OutlinePixelWidth: 1
     - _OutlineTexXSpeed: 0
     - _OutlineTexYSpeed: 1
@@ -257,7 +257,7 @@ Material:
     - _HitEffectColor: {r: 1, g: 1, b: 1, a: 1}
     - _HologramStripeColor: {r: 0, g: 1, b: 1, a: 1}
     - _InnerOutlineColor: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
-    - _OutlineColor: {r: 0.3019608, g: 0.3019608, b: 0.3019608, a: 1}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _OverlayColor: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}

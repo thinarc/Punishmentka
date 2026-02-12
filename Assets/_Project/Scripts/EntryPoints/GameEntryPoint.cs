@@ -36,7 +36,7 @@ namespace _Project.Scripts.EntryPoints
 
         private int _lastOnStart = -100;
 
-        private async void Start()
+        private void Start()
         {
             _targetIntensity = globals[0].intensity;
             
@@ -67,32 +67,59 @@ namespace _Project.Scripts.EntryPoints
             volumeCamera[0].profile = profiles[2];
         }
         
-        public async void DoChangeScene(int index) // 1 - fantasy; 2 - final
+        public async void DoChangeScene(int index)
         {
             if (index < 0 || index >= states.Count) return;
             if (states[index].onStart) return;
             if (!Application.isPlaying) return;
             
-            await WorldChangerEffect.instance.StartMenu();
+            await WorldChangerEffect.instance.StartMenu(index);
             
             states.ForEach(s => s.onStart = false);
             states[index].onStart = true;
             ChangeScene(out var render, out var meshes);
             SoundManager.instance.PlayClip(states[index].sound);
 
-            await WorldChangerEffect.instance.DoUndoMenu(render, meshes);
+            await WorldChangerEffect.instance.DoUndoMenu(render, meshes, index);
         }
+        
+        public RenderTexture normalView;
+        public RenderTexture smallView;
+        public Material worldViewM;
+        public Material worldViewRepM;
+        public Material worldViewSmallM;
+        public Material worldViewSmallRepM;
 
-        private void ChangeScene(bool auto)
+        private async void ChangeScene(bool auto)
         {
             if (auto)
             {
                 ChangeScene(out var render, out var viewsNoUsed);
+                
+                worldViewM.SetTexture("_MainTex", normalView);
+                worldViewRepM.SetTexture("_MainTex", normalView);
+                worldViewSmallM.SetTexture("_MainTex", smallView);
+                worldViewSmallRepM.SetTexture("_MainTex", smallView);
+
+                if (!Application.isPlaying)
+                {
+                    viewsNoUsed[0].sharedMaterial = render[0];
+                    viewsNoUsed[1].sharedMaterial = render[1];
+                    return;
+                }
+
+                var wait = UniTask.NextFrame();
+                states.ForEach(s =>
+                {
+                    if (!skipMenu && s.onStart && s.scene.name == "Home") wait = MenuInterface.instance.StartMenu();
+                });
+                await wait;
                 viewsNoUsed[0].sharedMaterial = render[0];
                 viewsNoUsed[1].sharedMaterial = render[1];
             }
         }
         
+        public GameObject TriggerTranslCam;
         private void ChangeScene(out Material[] render, out MeshRenderer[] views)
         {
             var r = Array.Empty<Material>();
@@ -144,16 +171,11 @@ namespace _Project.Scripts.EntryPoints
                 
                 if (!skipMenu && s.scene.name == "Home") menuInterface.SetActive(true);
                 else menuInterface.SetActive(false);
+                TriggerTranslCam.SetActive(s.scene.name != "Final");
             });
 
             render = r;
             views = v;
-            
-            if (!Application.isPlaying) return;
-            states.ForEach(s =>
-            {
-                if (!skipMenu && s.onStart && s.scene.name == "Home") MenuInterface.instance.StartMenu();
-            });
         }
         
 #if UNITY_EDITOR

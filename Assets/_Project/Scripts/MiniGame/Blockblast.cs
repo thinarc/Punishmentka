@@ -38,7 +38,7 @@ namespace _Project.Scripts.MiniGame
         }
         
         public InterItem item;
-        private int cyclegame = 4; // next cycle
+        private int cyclegame = 1; // next cycle
         public async override void SeeView()
         {
             if (specialDesk)
@@ -77,7 +77,7 @@ namespace _Project.Scripts.MiniGame
                 teddy.enabled = true;
                 flowers[1].enabled = true;
             }
-            else if (cyclegame is 5) // in fact 6
+            else if (cyclegame is 5)
             {
                 door.enabled = true;
             }
@@ -297,7 +297,7 @@ namespace _Project.Scripts.MiniGame
             }
 
             // взять первые addes
-            int count = Mathf.Min(Random.Range(2, 10), free.Count);
+            int count = Mathf.Min(Random.Range(4, 11), free.Count);
 
             for (int i = 0; i < count; i++)
             {

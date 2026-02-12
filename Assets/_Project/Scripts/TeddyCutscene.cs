@@ -48,7 +48,7 @@ public class TeddyCutscene : ItemView
         specialObject.GetComponent<Collider2D>().enabled = true;
         special.ReInvoke();
         
-        await UniTask.Delay(640);
+        await UniTask.Delay(340);
         player.disable = false;
         player.ResetTarget();
         

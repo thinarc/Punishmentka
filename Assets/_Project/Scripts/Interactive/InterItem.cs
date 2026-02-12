@@ -7,6 +7,8 @@ namespace _Project.Scripts.Interactive
 {
     public class InterItem : MonoBehaviour
     {
+        [SerializeField] private bool act;
+        
         [SerializeField] private Material extra;
         [SerializeField] private Material extraS;
         public bool oneshot;
@@ -76,6 +78,8 @@ namespace _Project.Scripts.Interactive
         
         private void Update()
         {
+            if (act && enabled) _anim.SetTrigger("Act");
+            
             if (_used) _selected = _def;
             if (_used) _selectedS = _def;
         }
