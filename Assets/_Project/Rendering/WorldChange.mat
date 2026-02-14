@@ -63,7 +63,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 8400000, guid: af4b319e2830e1a428a3cf546f658c32, type: 2}
+        m_Texture: {fileID: 8400000, guid: c0420ca9085112c48991e399a82d8740, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -261,7 +261,7 @@ Material:
     - _EnchantedRainbowSpeed: 0.5
     - _EnchantedRainbowToggle: 0
     - _EnchantedReduce: 0
-    - _FadingFade: 1
+    - _FadingFade: 0
     - _FadingNoiseFactor: 0.2
     - _FadingWidth: 0.3
     - _FlameBrightness: 10
@@ -280,7 +280,7 @@ Material:
     - _FullDistortionFade: 1
     - _FullGlowDissolveFade: 0.4
     - _FullGlowDissolveWidth: 0.5
-    - _GaussianBlurFade: 0.35786435
+    - _GaussianBlurFade: 0
     - _GaussianBlurOffset: 0.5
     - _GlitchBrightness: 4
     - _GlitchFade: 0.03
@@ -302,7 +302,7 @@ Material:
     - _HologramMinAlpha: 0.2
     - _Hue: 0
     - _InkSpreadContrast: 0.24
-    - _InkSpreadDistance: 15
+    - _InkSpreadDistance: -5
     - _InkSpreadFade: 0.92
     - _InkSpreadNoiseFactor: 5
     - _InkSpreadWidth: 0.2

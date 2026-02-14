@@ -52,8 +52,10 @@ namespace _Project.Scripts.MiniGame
             }
             
             wait = true;
+            SoundManager.instance.PlayMind(Resources.Load<AudioClip>("Mindgame"));
             cyclegame++;
             await RunCycle(cyclegame - 1);
+            SoundManager.instance.ReturnMind();
             UnseeView();
         }
         

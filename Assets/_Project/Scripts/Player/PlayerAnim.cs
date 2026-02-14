@@ -1,4 +1,7 @@
+using Cysharp.Threading.Tasks;
+using Sirenix.Utilities;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 namespace _Project.Scripts.Player
 {
@@ -16,6 +19,73 @@ namespace _Project.Scripts.Player
         [SerializeField] private RuntimeAnimatorController start;
         public int _current;
 
+        public RuntimeAnimatorController fStart;
+        public AnimatorOverrideController[] fOverrides;
+        public Light2D[] ligtsF;
+        public float[] ligthsFSt;
+
+        public async void OneFantasy()
+        {
+            start = fStart;
+            _controller = fStart;
+            overrides = fOverrides;
+
+            await UniTask.WaitWhile(() =>
+            {
+                for (var i = 0; i < ligtsF.Length; i++)
+                {
+                    ligtsF[i].intensity = Mathf.MoveTowards(ligtsF[i].intensity, ligthsFSt[i], Time.deltaTime);
+                }
+                return !Mathf.Approximately(ligtsF[0].intensity, ligthsFSt[0]) || !Mathf.Approximately(ligtsF[2].intensity, ligthsFSt[2]);
+            });
+
+            await UniTask.Delay(600);
+            await UniTask.Delay(200);
+            
+            while (true)
+            {
+                var rand = ligthsFSt[0] * Random.Range(0.64f, 1.24f);
+                
+                await UniTask.WaitUntil(() =>
+                {
+                    var done = true;
+
+                    for (int i = 0; i < ligtsF.Length; i++)
+                    {
+                        ligtsF[i].intensity = Mathf.MoveTowards(
+                            ligtsF[i].intensity,
+                            rand,
+                            Time.deltaTime * 0.6f);
+
+                        if (!Mathf.Approximately(ligtsF[i].intensity, rand))
+                            done = false;
+                    }
+
+                    return done;
+                });
+                
+                var rand2 = ligthsFSt[2] * Random.Range(0.64f, 1.24f);
+                
+                await UniTask.WaitUntil(() =>
+                {
+                    var done = true;
+
+                    for (int i = 0; i < ligtsF.Length; i++)
+                    {
+                        ligtsF[i].intensity = Mathf.MoveTowards(
+                            ligtsF[i].intensity,
+                            rand2,
+                            Time.deltaTime * 0.4f);
+
+                        if (!Mathf.Approximately(ligtsF[i].intensity, rand2))
+                            done = false;
+                    }
+
+                    return done;
+                });
+            }
+        }
+
         private void Start()
         {
             _anim = GetComponent<Animator>();
@@ -23,6 +93,12 @@ namespace _Project.Scripts.Player
             
             if (start == null) _controller = _anim.runtimeAnimatorController;
             else _controller = start;
+            
+            for (var i = 0; i < ligtsF.Length; i++)
+            {
+                ligthsFSt[i] = ligtsF[i].intensity;
+                ligtsF[i].intensity = 0;
+            }
         }
 
         private void Update()

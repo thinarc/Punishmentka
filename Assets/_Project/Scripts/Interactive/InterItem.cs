@@ -42,6 +42,7 @@ namespace _Project.Scripts.Interactive
 
         [Space(10)] public bool black;
         public bool cigaaa;
+        public bool recRecord;
 
         public void NowOneshot()
         {
@@ -146,8 +147,9 @@ namespace _Project.Scripts.Interactive
                 FindAnyObjectByType<WebGLVideoUI>().PlayVideo();
 
                 var sound = SoundManager.instance;
-                if (sound.bg.clip != "Final") sound.PlayClipManual(Resources.Load<AudioClip>("Final"));
+                if (sound.bg.clip.name != "Final") sound.PlayClipManual(Resources.Load<AudioClip>("Final"));
             }
+            if (recRecord) FindAnyObjectByType<PlayerAnim>().OneFantasy();
         }
 
         private void DoFantasy()

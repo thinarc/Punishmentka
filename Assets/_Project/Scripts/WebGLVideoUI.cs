@@ -58,7 +58,7 @@ namespace _Project.Scripts
             
             pl.SetTarget(new Vector2(-0.40f, -0.67f));
             await UniTask.Delay(2740);
-            pl.SetTarget(new Vector2(-0.67f, -0.64f));
+            pl.SetTarget(new Vector2(-0.67f, -0.57f));
 
             await UniTask.Delay(6000);
             l4.GetComponentInParent<Animator>().enabled = false;
@@ -93,7 +93,7 @@ namespace _Project.Scripts
             player.loopPointReached += async _ =>
             {
                 SoundManager.instance.ReturnFade();
-                await UniTask.Delay(1400);
+                await UniTask.Delay(600);
                 await UniTask.WaitWhile(() =>
                 {
                     var val = Mathf.MoveTowards(raw.material.GetFloat("_FadingFade"), 1, Time.deltaTime * Random.Range(0.04f, 0.24f));

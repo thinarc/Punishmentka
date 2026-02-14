@@ -10,6 +10,7 @@ namespace _Project.Scripts
         public static SoundManager instance;
         
         public AudioSource bg;
+        public AudioSource mind;
         public AudioSource sfx;
 
         private void Start() => instance = this;
@@ -25,6 +26,35 @@ namespace _Project.Scripts
             bg.Play();
             sfx.Play();
         }
+
+        public AudioClip pastHome;
+        public async void PlayMind(AudioClip clip)
+        {
+            const float fade = 2f;
+            bg.DOFade(0, fade).SetEase(Ease.Linear).SetUpdate(true).OnComplete(() =>
+            {
+                bg.Pause();
+            });
+            await UniTask.Delay(TimeSpan.FromSeconds(fade) / 2);
+            mind.clip = clip;
+            mind.loop = true;
+            mind.DOFade(0, 0);
+            mind.Play();
+            mind.DOFade(1, fade).SetEase(Ease.Linear).SetUpdate(true);
+        }
+        
+        public async void ReturnMind()
+        {
+            const float fade = 1f;
+            mind.DOFade(0, fade).SetEase(Ease.Linear).SetUpdate(true).OnComplete(() =>
+            {
+                mind.Pause();
+            });
+            await UniTask.Delay(TimeSpan.FromSeconds(fade) / 2);
+            bg.DOFade(0, 0);
+            bg.Play();
+            bg.DOFade(1, fade).SetEase(Ease.Linear).SetUpdate(true);
+        }
         
         public async void PlayClip(AudioClip clip)
         {
@@ -36,8 +66,7 @@ namespace _Project.Scripts
             
             var fade = 2.12f;
             if (bg.clip == null) fade = 0f;
-            bg.DOFade(0, fade).SetEase(Ease.Linear).SetUpdate(true);
-            await UniTask.Delay(TimeSpan.FromSeconds(fade / 2));
+            await bg.DOFade(0, fade).SetEase(Ease.Linear).SetUpdate(true).AsyncWaitForCompletion();
             bg.clip = clip;
             bg.Play();
             bg.DOFade(1, 2.72f).SetEase(Ease.Linear).SetUpdate(true);
@@ -48,9 +77,12 @@ namespace _Project.Scripts
         {
             manual = true;
             var fade = 2.12f;
-            if (bg.clip == null) fade = 0f;
-            bg.DOFade(0, fade).SetEase(Ease.Linear).SetUpdate(true);
-            await UniTask.Delay(TimeSpan.FromSeconds(fade / 2));
+            if (bg.clip == null)
+            {
+                fade = 0f;
+                print("Fade out none??");
+            }
+            await bg.DOFade(0, fade).SetEase(Ease.Linear).SetUpdate(true).AsyncWaitForCompletion();
             bg.clip = clip;
             bg.Play();
             bg.DOFade(1, 2.72f).SetEase(Ease.Linear).SetUpdate(true);
@@ -62,8 +94,7 @@ namespace _Project.Scripts
         {
             var fade = 2.12f;
             if (bg.clip == null) fade = 0f;
-            bg.DOFade(0, fade).SetEase(Ease.Linear).SetUpdate(true);
-            await UniTask.Delay(TimeSpan.FromSeconds(fade / 2));
+            await bg.DOFade(0, fade).SetEase(Ease.Linear).SetUpdate(true).AsyncWaitForCompletion();
             pastClip = bg.clip;
             bg.clip = clip;
             bg.loop = false;
