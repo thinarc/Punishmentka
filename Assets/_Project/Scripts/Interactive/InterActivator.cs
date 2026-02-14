@@ -36,6 +36,14 @@ namespace _Project.Scripts.Interactive
             {
                 OnUsed(null);
             }
+
+            if (flower && enabled && Mathf.Approximately(GetComponent<SpriteRenderer>().color.a, 1))
+            {
+                foreach (var t in GetComponentsInChildren<GameObject>())
+                {
+                    t.SetActive(true);
+                }
+            }
         }
 
         public async void OnUsed(InterItem item)

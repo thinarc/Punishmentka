@@ -181,7 +181,7 @@ Material:
     - _OffsetUvY: 0
     - _OnlyInnerOutline: 0
     - _OnlyOutline: 0
-    - _OutlineAlpha: 0.38
+    - _OutlineAlpha: 0.35
     - _OutlineDistortAmount: 0.34
     - _OutlineDistortTexXSpeed: 0
     - _OutlineDistortTexYSpeed: 4

@@ -14,6 +14,7 @@ namespace _Project.Scripts.Interactive
                 return;
             }
             FindAnyObjectByType<GameEntryPoint>().DoChangeScene(1);
+            FindAnyObjectByType<GameEntryPoint>().ChangeLightM(0.74f);
         }
 
         public override void UnseeView() { }

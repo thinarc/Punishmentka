@@ -53,10 +53,12 @@ namespace _Project.Scripts.EntryPoints
             logo.DOFade(0, 0);
             menu.interactable = true;
             menu.blocksRaycasts = true;
+            buttonRect.GetComponent<Button>().interactable = false;
             BeforeMenu();
             logoRect.DOScale(1, 0.64f).SetEase(Ease.OutBack);
             await logo.DOFade(1, 0.8f).SetEase(Ease.InOutSine).AsyncWaitForCompletion();
             menu.DOFade(1, 0.44f).SetEase(Ease.InOutSine);
+            buttonRect.GetComponent<Button>().interactable = true;
 
             await UniTask.WaitWhile(() => menu.blocksRaycasts);
         }

@@ -8,6 +8,7 @@ namespace _Project.Scripts.Interactive
     public class InterItem : MonoBehaviour
     {
         [SerializeField] private bool act;
+        public bool ciga;
         
         [SerializeField] private Material extra;
         [SerializeField] private Material extraS;
@@ -40,6 +41,7 @@ namespace _Project.Scripts.Interactive
         public static event Action doFantasyy;
 
         [Space(10)] public bool black;
+        public bool cigaaa;
 
         public void NowOneshot()
         {
@@ -61,7 +63,8 @@ namespace _Project.Scripts.Interactive
 
         private void Start()
         {
-            Sprite = GetComponent<SpriteRenderer>();
+            if (!cigaaa) Sprite = GetComponent<SpriteRenderer>();
+            else Sprite = GetComponentInParent<SpriteRenderer>();
             _anim = GetComponent<Animator>();
             
             
@@ -138,11 +141,18 @@ namespace _Project.Scripts.Interactive
             Used?.Invoke(this);
             FindAnyObjectByType<PlayerMovement>().ResetTarget();
             if (realFantasy) DoFantasy();
+            if (ciga)
+            {
+                FindAnyObjectByType<WebGLVideoUI>().PlayVideo();
+
+                var sound = SoundManager.instance;
+                if (sound.bg.clip != "Final") sound.PlayClipManual(Resources.Load<AudioClip>("Final"));
+            }
         }
 
         private void DoFantasy()
         {
-            SoundManager.instance.PlayClip(Resources.Load<AudioClip>("RealFantasy"));
+            SoundManager.instance.ReturnPlayClip(Resources.Load<AudioClip>("RealFantasy"));
             doFantasyy?.Invoke();
         }
 

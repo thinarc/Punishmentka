@@ -67,6 +67,22 @@ namespace _Project.Scripts.EntryPoints
             volumeCamera[0].profile = profiles[2];
         }
         
+        public void ChangeLightM(float intensity)
+        {
+            _targetIntensity = intensity;
+            if (Mathf.Approximately(globals[0].intensity, intensity)) return;
+            globals[0].intensity = Mathf.MoveTowards(globals[0].intensity, intensity, Time.deltaTime / 35f);
+            globals[1].intensity = Mathf.MoveTowards(globals[1].intensity, intensity, Time.deltaTime / 35f);
+        }
+        
+        public void ChangeLightC(float intensity)
+        {
+            _targetIntensity = intensity;
+            if (Mathf.Approximately(globals[0].intensity, intensity)) return;
+            globals[0].intensity = Mathf.MoveTowards(globals[0].intensity, intensity, Time.deltaTime * 16f);
+            globals[1].intensity = Mathf.MoveTowards(globals[1].intensity, intensity, Time.deltaTime * 16f);
+        }
+        
         public async void DoChangeScene(int index)
         {
             if (index < 0 || index >= states.Count) return;

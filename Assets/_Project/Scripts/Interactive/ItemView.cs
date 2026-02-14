@@ -12,10 +12,20 @@ namespace _Project.Scripts.Interactive
         [SerializeField] private Image secondItem;
         [SerializeField] private CanvasGroup buttonForActivateSecondItem;
 
+        public bool skippedBook;
+
         public bool specialDesk;
         
         public async virtual void SeeView()
         {
+            if (skippedBook)
+            {
+                wait = true;
+                await UniTask.Delay(320);
+                wait = false;
+                return;
+            }
+            
             Time.timeScale = 0f;
             var g = GetComponent<CanvasGroup>();
             g.blocksRaycasts = true;
