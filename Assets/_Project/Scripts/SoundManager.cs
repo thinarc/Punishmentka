@@ -36,8 +36,8 @@ namespace _Project.Scripts
                 bg.Pause();
             });
             await UniTask.Delay(TimeSpan.FromSeconds(fade) / 2);
-            mind.clip = clip;
-            mind.loop = true;
+            if (mind.clip == null) mind.clip = clip;
+            if (mind.loop == false) mind.loop = true;
             mind.DOFade(0, 0);
             mind.Play();
             mind.DOFade(1, fade).SetEase(Ease.Linear).SetUpdate(true);
@@ -45,7 +45,7 @@ namespace _Project.Scripts
         
         public async void ReturnMind()
         {
-            const float fade = 1f;
+            const float fade = 2f;
             mind.DOFade(0, fade).SetEase(Ease.Linear).SetUpdate(true).OnComplete(() =>
             {
                 mind.Pause();
