@@ -26,8 +26,7 @@ namespace _Project.Scripts
             bg.Play();
             sfx.Play();
         }
-
-        public AudioClip pastHome;
+        
         public async void PlayMind(AudioClip clip)
         {
             const float fade = 2f;
@@ -64,19 +63,19 @@ namespace _Project.Scripts
                 return;
             }
             
-            var fade = 2.12f;
+            var fade = 1.84f;
             if (bg.clip == null) fade = 0f;
             await bg.DOFade(0, fade).SetEase(Ease.Linear).SetUpdate(true).AsyncWaitForCompletion();
             bg.clip = clip;
             bg.Play();
-            bg.DOFade(1, 2.72f).SetEase(Ease.Linear).SetUpdate(true);
+            bg.DOFade(1, 2f).SetEase(Ease.Linear).SetUpdate(true);
         }
 
         public bool manual;
         public async void PlayClipManual(AudioClip clip)
         {
             manual = true;
-            var fade = 2.12f;
+            var fade = 1.84f;
             if (bg.clip == null)
             {
                 fade = 0f;
@@ -84,15 +83,16 @@ namespace _Project.Scripts
             }
             await bg.DOFade(0, fade).SetEase(Ease.Linear).SetUpdate(true).AsyncWaitForCompletion();
             bg.clip = clip;
+            bg.loop = true;
             bg.Play();
-            bg.DOFade(1, 2.72f).SetEase(Ease.Linear).SetUpdate(true);
+            bg.DOFade(1, 2f).SetEase(Ease.Linear).SetUpdate(true);
         }
 
         public AudioClip pastClip;
         public bool returned;
         public async void ReturnPlayClip(AudioClip clip)
         {
-            var fade = 2.12f;
+            var fade = 1.84f;
             if (bg.clip == null) fade = 0f;
             await bg.DOFade(0, fade).SetEase(Ease.Linear).SetUpdate(true).AsyncWaitForCompletion();
             pastClip = bg.clip;

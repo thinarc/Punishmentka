@@ -31,6 +31,8 @@ namespace _Project.Scripts.MiniGame
         public InterActivator teddy;
         public InterActivator door;
 
+        public bool inGame;
+
         private void Start()
         {
             _anim = GetComponent<Animator>();
@@ -41,6 +43,8 @@ namespace _Project.Scripts.MiniGame
         private int cyclegame = 1; // next cycle
         public async override void SeeView()
         {
+            if (inGame) return;
+            inGame = true;
             if (specialDesk)
             {
                 var player = FindAnyObjectByType<PlayerMovement>();
@@ -83,6 +87,8 @@ namespace _Project.Scripts.MiniGame
             {
                 door.enabled = true;
             }
+
+            inGame = false;
         }
 
         // public async void RunGame()

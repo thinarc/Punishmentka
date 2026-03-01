@@ -1,5 +1,6 @@
 using System;
 using _Project.Scripts.EntryPoints;
+using _Project.Scripts.Pincode;
 using _Project.Scripts.Player;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
@@ -45,7 +46,13 @@ namespace _Project.Scripts
             }
         }
 
-        private async void Start() => raw.material.SetFloat("_FadingFade", 0);
+        private async void Start()
+        {
+            raw.material.SetFloat("_FadingFade", 0);
+
+            // await UniTask.Delay(500);
+            // PlayVideo();
+        }
 
         public async void PlayVideo()
         {
@@ -67,11 +74,11 @@ namespace _Project.Scripts
             
             await UniTask.Delay(3600);
             
-            
             preparedddd = true;
             FindAnyObjectByType<PlayerMovement>().GetComponentInChildren<SpriteRenderer>().DOFade(0, 0.2f).SetEase(Ease.OutBack);
             
             await UniTask.Delay(3600);
+            await FindAnyObjectByType<CalledPin>().CheckPin();
             
             var filePath = System.IO.Path.Combine(Application.streamingAssetsPath, "shotvideo.mp4");
             player.url = filePath;
