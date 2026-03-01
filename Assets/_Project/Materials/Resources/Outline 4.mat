@@ -181,11 +181,11 @@ Material:
     - _OffsetUvY: 0
     - _OnlyInnerOutline: 0
     - _OnlyOutline: 0
-    - _OutlineAlpha: 0.63
+    - _OutlineAlpha: 0.643
     - _OutlineDistortAmount: 0.34
     - _OutlineDistortTexXSpeed: 0
     - _OutlineDistortTexYSpeed: 4
-    - _OutlineGlow: 1.5
+    - _OutlineGlow: 1.513
     - _OutlinePixelWidth: 1
     - _OutlineTexXSpeed: 0
     - _OutlineTexYSpeed: 1
