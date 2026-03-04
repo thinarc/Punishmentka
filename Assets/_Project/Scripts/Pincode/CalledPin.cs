@@ -36,8 +36,15 @@ namespace _Project.Scripts.Pincode
 
             while (true)
             {
-                await input.OnEndEditAsync();
-                if (input.text == "2792") break;
+                // await input.OnEndEditAsync();
+                await UniTask.WaitUntil(() => input.text.Length >= 4);
+                if (input.text == "2792")
+                {
+                    input.text = "";
+                    await UniTask.NextFrame();
+                    input.text = "2792";
+                    break;
+                }
                 input.text = "";
                 input.interactable = false;
                 await UniTask.Delay(100);

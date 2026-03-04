@@ -80,6 +80,7 @@ namespace _Project.Scripts
             
             await UniTask.Delay(3600);
             await UniTask.Delay(2400);
+            await UniTask.Delay(200);
             await FindAnyObjectByType<CalledPin>().CheckPin();
             
             var filePath = System.IO.Path.Combine(Application.streamingAssetsPath, "shotvideo.mp4");
@@ -106,14 +107,14 @@ namespace _Project.Scripts
                 ShowBye();
                 await UniTask.WaitWhile(() =>
                 {
-                    var val = Mathf.MoveTowards(raw.material.GetFloat("_FadingFade"), 1, Time.deltaTime * Random.Range(0.04f, 0.24f));
+                    var val = Mathf.MoveTowards(raw.material.GetFloat("_FadingFade"), 1, Time.deltaTime * Random.Range(0.07f, 0.24f));
                     raw.material.SetFloat("_FadingFade", val);
                     return !Mathf.Approximately(val, 1);
                 });
 
                 async void ShowBye()
                 {
-                    await UniTask.Delay(1840);
+                    await UniTask.Delay(940);
                     leavetext.alpha = 0;
                     leavetext.gameObject.SetActive(true);
                     leavetext.transform.DOScale(1f, 0.4f).SetEase(Ease.OutBack).From(0.82f);
