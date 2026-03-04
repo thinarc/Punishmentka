@@ -260,7 +260,7 @@ Material:
     - _EnchantedRainbowSpeed: 0.5
     - _EnchantedRainbowToggle: 0
     - _EnchantedReduce: 0
-    - _FadingFade: 0
+    - _FadingFade: 1
     - _FadingNoiseFactor: 0.2
     - _FadingWidth: 0.3
     - _FlameBrightness: 10
