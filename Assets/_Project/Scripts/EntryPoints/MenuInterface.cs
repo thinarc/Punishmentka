@@ -83,6 +83,8 @@ namespace _Project.Scripts.EntryPoints
 
         public async void UndoMenu(Material start)
         {
+            SoundManager.PSfx(Resources.Load<AudioClip>("UsableVFx/Trimmed_sound-effect-4351"), 0);
+            
             var tween = buttonRect.DOShakePosition(0.1f, 3f).SetLoops(-1).SetEase(Ease.OutBack);
             buttonRect.GetComponent<Button>().interactable = false;
             

@@ -2,6 +2,7 @@ using System;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace _Project.Scripts
 {
@@ -12,8 +13,22 @@ namespace _Project.Scripts
         public AudioSource bg;
         public AudioSource mind;
         public AudioSource sfx;
+        public AudioSource[] sfxR;
 
         private void Start() => instance = this;
+
+        public void PlaySfx(AudioClip clip, int vol)
+        {
+            if (vol == 6)
+            {
+                sfxR[vol].pitch = Random.Range(1f, 3f);
+                sfxR[vol].panStereo = Random.Range(-0.8f, 0.8f);
+                sfxR[vol].volume = Random.Range(0.04f, 0.16f);
+            }
+            sfxR[vol].PlayOneShot(clip);
+        }
+
+        public static void PSfx(AudioClip clip, int vol = 2) => instance.PlaySfx(clip, vol);
         
         public void PauseMusic()
         {
@@ -75,7 +90,7 @@ namespace _Project.Scripts
         public async void PlayClipManual(AudioClip clip)
         {
             manual = true;
-            var fade = 1.84f;
+            var fade = 2.7f;
             if (bg.clip == null)
             {
                 fade = 0f;
@@ -85,7 +100,7 @@ namespace _Project.Scripts
             bg.clip = clip;
             bg.loop = true;
             bg.Play();
-            bg.DOFade(1, 2f).SetEase(Ease.Linear).SetUpdate(true);
+            bg.DOFade(1, 1.4f).SetEase(Ease.Linear).SetUpdate(true);
         }
 
         public AudioClip pastClip;
@@ -132,7 +147,5 @@ namespace _Project.Scripts
             sfx.Play();
             sfx.DOFade(1, 1f).SetEase(Ease.Linear).SetUpdate(true);
         }
-
-        public void PlaySfx(AudioClip clip) => sfx.PlayOneShot(clip);
     }
 }

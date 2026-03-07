@@ -21,6 +21,8 @@ namespace _Project.Scripts.Pincode
             pin.blocksRaycasts = false;
             pin.gameObject.SetActive(false);
         }
+
+        public GameObject hintG;
         
         public async UniTask CheckPin()
         {
@@ -31,6 +33,14 @@ namespace _Project.Scripts.Pincode
             pin.interactable = true;
             pin.blocksRaycasts = true;
             await pin.DOFade(1, 0.32f).SetEase(Ease.InBack).AsyncWaitForCompletion();
+            SoundManager.PSfx(Resources.Load<AudioClip>("UsableVFx/pin/SkywardHero_UI (37)"));
+            ShowHint();
+
+            async void ShowHint()
+            {
+                await UniTask.Delay(2000);
+                hintG.SetActive(true);
+            }
 
             var input = pin.GetComponent<TMP_InputField>();
 
@@ -47,12 +57,17 @@ namespace _Project.Scripts.Pincode
                 }
                 input.text = "";
                 input.interactable = false;
+                SoundManager.PSfx(Resources.Load<AudioClip>("UsableVFx/pin/SkywardHero_UI (20)"));
                 await UniTask.Delay(100);
                 input.interactable = true;
             }
-
+            
+            hintG.GetComponent<CanvasGroup>().DOFade(0, 0.2f).SetEase(Ease.InOutSine);
+            SoundManager.PSfx(Resources.Load<AudioClip>("UsableVFx/pin/SkywardHero_UI (41)"));
+            await UniTask.Delay(TimeSpan.FromSeconds(0.26f));
             pin.DOFade(0, 0.54f).SetEase(Ease.OutBack);
-            await UniTask.Delay(TimeSpan.FromSeconds(0.7f));
+            await UniTask.Delay(TimeSpan.FromSeconds(0.24f));
+            await UniTask.Delay(TimeSpan.FromSeconds(0.46f));
             bg.DOFade(0, 0.24f).SetEase(Ease.InOutSine);
             await UniTask.Delay(TimeSpan.FromSeconds(0.36f));
         }

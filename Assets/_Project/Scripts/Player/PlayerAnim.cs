@@ -23,6 +23,8 @@ namespace _Project.Scripts.Player
         public AnimatorOverrideController[] fOverrides;
         public Light2D[] ligtsF;
         public float[] ligthsFSt;
+        
+        public AudioClip[] footSounds;
 
         public async void OneFantasy()
         {
@@ -91,6 +93,9 @@ namespace _Project.Scripts.Player
             _anim = GetComponent<Animator>();
             _player = GetComponentInParent<PlayerMovement>();
             
+            footSounds = Resources.LoadAll<AudioClip>("UsableVFx/steps");
+            if (transform.parent.name == "Player3") footSounds = Resources.LoadAll<AudioClip>("UsableVFx/steps2");
+            
             if (start == null) _controller = _anim.runtimeAnimatorController;
             else _controller = start;
             
@@ -101,11 +106,22 @@ namespace _Project.Scripts.Player
             }
         }
 
-        private void Update()
+        private bool footPlay;
+
+        private async void Update()
         {
             var velocity = _player.Velocity;
             _anim.SetFloat("idlemulti", idleMulti);
             _anim.SetBool("walk", velocity.magnitude > 0.034f);
+            if (velocity.magnitude > 0.034f && !footPlay)
+            {
+                SoundManager.PSfx(footSounds[Random.Range(0, footSounds.Length)], Random.Range(3, 5));
+                footPlay = true;
+                if (transform.parent.name == "Player3") await UniTask.Delay(1000);
+                else await UniTask.Delay(840);
+
+                footPlay = false;
+            }
             
             var acceleration = velocity.magnitude;
             if (acceleration < 0.24f) acceleration = 0.24f;

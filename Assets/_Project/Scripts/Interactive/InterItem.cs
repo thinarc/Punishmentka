@@ -1,5 +1,6 @@
 using System;
 using _Project.Scripts.Player;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -43,6 +44,8 @@ namespace _Project.Scripts.Interactive
         [Space(10)] public bool black;
         public bool cigaaa;
         public bool recRecord;
+        public AudioClip[] clip;
+        public int vol = 2;
 
         public void NowOneshot()
         {
@@ -116,7 +119,7 @@ namespace _Project.Scripts.Interactive
             Stayed2 = null;
         }
         
-        private void OnTriggerStay2D(Collider2D other)
+        private async void OnTriggerStay2D(Collider2D other)
         {
             if (!enabled) return;
             
@@ -145,12 +148,29 @@ namespace _Project.Scripts.Interactive
             if (ciga)
             {
                 FindAnyObjectByType<WebGLVideoUI>().PlayVideo();
-
+            }
+            if (manualS)
+            {
+                await UniTask.Delay(1400);
                 var sound = SoundManager.instance;
                 if (sound.bg.clip.name != "Final") sound.PlayClipManual(Resources.Load<AudioClip>("Final"));
             }
             if (recRecord) FindAnyObjectByType<PlayerAnim>().OneFantasy();
+            if (clip.Length == 0) return;
+            SoundManager.PSfx(clip?[0], vol);
+            if (clip.Length >= 2)
+            {
+                // await UniTask.Delay(400);
+                SoundManager.PSfx(clip?[1], vol);
+            }
+            if (clip.Length == 3)
+            {
+                await UniTask.Delay(1200);
+                SoundManager.PSfx(clip?[2], vol);
+            }
         }
+
+        public bool manualS;
 
         private void DoFantasy()
         {

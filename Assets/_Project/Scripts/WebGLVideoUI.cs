@@ -30,12 +30,19 @@ namespace _Project.Scripts
         public Light2D l44;
         public Light2D l55;
 
-        private void Update()
+        private bool clipshot;
+
+        private async void Update()
         {
             if (preparedddd)
             {
                 l1.intensity = Mathf.MoveTowards(l1.intensity, 1.84f, Time.deltaTime * 0.4f);
                 l2.intensity = Mathf.MoveTowards(l1.intensity, 1.84f, Time.deltaTime * 0.4f);
+                if (clipshot) return;
+                clipshot = true;
+                SoundManager.PSfx(Resources.Load<AudioClip>("UsableVFx/cig/Trimmed_поджег"));
+                await UniTask.Delay(1340);
+                SoundManager.PSfx(Resources.Load<AudioClip>("UsableVFx/cig/Trimmed_дыхание"));
             }
 
             if (preparedddd2)

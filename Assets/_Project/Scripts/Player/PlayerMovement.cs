@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
+using Random = UnityEngine.Random;
 
 namespace _Project.Scripts.Player
 {
@@ -23,6 +24,8 @@ namespace _Project.Scripts.Player
 
         public bool disable;
         
+        public AudioClip[] navSounds;
+        
         private Vector2 GetVelocity()
         {
             if (_agent == null) _agent = GetComponent<NavMeshAgent>();
@@ -33,6 +36,8 @@ namespace _Project.Scripts.Player
         {
             _agent = GetComponent<NavMeshAgent>();
             _startSpeed = _agent.speed;
+            
+            navSounds = Resources.LoadAll<AudioClip>("UsableVFx/navpoint");
         }
 
         public void SetTarget(Vector2 target)
@@ -41,6 +46,7 @@ namespace _Project.Scripts.Player
             _agent.SetDestination(_target);
             targetParticle.transform.position = _target;
             targetParticle.Play();
+            SoundManager.PSfx(navSounds[Random.Range(0, navSounds.Length)], 6);
         }
 
         private void Update()
@@ -57,10 +63,7 @@ namespace _Project.Scripts.Player
                 return;
             
             var world = inputCam.ScreenToWorldPoint(Input.mousePosition);
-            _target = new Vector2(world.x, world.y);
-            _agent.SetDestination(_target);
-            targetParticle.transform.position = _target;
-            targetParticle.Play();
+            SetTarget(new Vector2(world.x, world.y));
         }
         
         private static bool IsPointerInsideScreen()
