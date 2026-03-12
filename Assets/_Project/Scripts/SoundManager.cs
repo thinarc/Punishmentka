@@ -21,9 +21,9 @@ namespace _Project.Scripts
         {
             if (vol == 6)
             {
-                sfxR[vol].pitch = Random.Range(1f, 3f);
+                sfxR[vol].pitch = Random.Range(0.94f, 1.24f);
                 sfxR[vol].panStereo = Random.Range(-0.8f, 0.8f);
-                sfxR[vol].volume = Random.Range(0.04f, 0.16f);
+                sfxR[vol].volume = Random.Range(0.024f, 0.036f);
             }
             sfxR[vol].PlayOneShot(clip);
         }
@@ -83,7 +83,7 @@ namespace _Project.Scripts
             await bg.DOFade(0, fade).SetEase(Ease.Linear).SetUpdate(true).AsyncWaitForCompletion();
             bg.clip = clip;
             bg.Play();
-            bg.DOFade(1, 2f).SetEase(Ease.Linear).SetUpdate(true);
+            bg.DOFade(1, 1.8f).SetEase(Ease.Linear).SetUpdate(true);
         }
 
         public bool manual;

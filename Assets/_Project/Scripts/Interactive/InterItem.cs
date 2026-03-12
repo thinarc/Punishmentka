@@ -14,6 +14,7 @@ namespace _Project.Scripts.Interactive
         [SerializeField] private Material extra;
         [SerializeField] private Material extraS;
         public bool oneshot;
+        public bool oneshotspecial;
         
         private Material _selected;
         private Material _selectedS;
@@ -100,7 +101,7 @@ namespace _Project.Scripts.Interactive
             if (!enabled) return;
             
             if (!other.CompareTag("Player")) return;
-            if (oneshot && _used) return;
+            if ((oneshot || oneshotspecial) && _used) return;
             if (Stayed != null) Stayed2 = Stayed;
             Stayed = this;
         }
@@ -118,13 +119,15 @@ namespace _Project.Scripts.Interactive
             else if (Stayed2 != null) Stayed = Stayed2;
             Stayed2 = null;
         }
+
+        public bool extr;
         
         private async void OnTriggerStay2D(Collider2D other)
         {
             if (!enabled) return;
             
             if (!other.CompareTag("Player")) return;
-            if (oneshot && _used)
+            if ((oneshot || oneshotspecial) && _used)
             {
                 GetComponent<Collider2D>().enabled = false;
                 enabled = false;
@@ -139,6 +142,21 @@ namespace _Project.Scripts.Interactive
             Sprite.material = _selectedS;
             
             if (!InteractButton.Instance.Interact) return;
+            if (extr)
+            {
+                if (clip.Length == 0) return;
+                SoundManager.PSfx(clip?[0], vol);
+                if (clip.Length >= 2)
+                {
+                    // await UniTask.Delay(400);
+                    SoundManager.PSfx(clip?[1], vol);
+                }
+                if (clip.Length == 3)
+                {
+                    await UniTask.Delay(1200);
+                    SoundManager.PSfx(clip?[2], vol);
+                }
+            }
             _anim.SetTrigger(Interact);
             Sprite.material = _def;
             _used = true;
@@ -156,17 +174,20 @@ namespace _Project.Scripts.Interactive
                 if (sound.bg.clip.name != "Final") sound.PlayClipManual(Resources.Load<AudioClip>("Final"));
             }
             if (recRecord) FindAnyObjectByType<PlayerAnim>().OneFantasy();
-            if (clip.Length == 0) return;
-            SoundManager.PSfx(clip?[0], vol);
-            if (clip.Length >= 2)
+            if (!extr)
             {
-                // await UniTask.Delay(400);
-                SoundManager.PSfx(clip?[1], vol);
-            }
-            if (clip.Length == 3)
-            {
-                await UniTask.Delay(1200);
-                SoundManager.PSfx(clip?[2], vol);
+                if (clip.Length == 0) return;
+                SoundManager.PSfx(clip?[0], vol);
+                if (clip.Length >= 2)
+                {
+                    // await UniTask.Delay(400);
+                    SoundManager.PSfx(clip?[1], vol);
+                }
+                if (clip.Length == 3)
+                {
+                    await UniTask.Delay(1200);
+                    SoundManager.PSfx(clip?[2], vol);
+                }
             }
         }
 

@@ -38,7 +38,7 @@ namespace _Project.Scripts.Interactive
             buttonForActivateSecondItem.interactable = true;
             buttonForActivateSecondItem.blocksRaycasts = true;
             buttonForActivateSecondItem.DOFade(1f, 0.4f).SetEase(Ease.OutSine).SetUpdate(true);
-            buttonForActivateSecondItem.GetComponent<Button>().onClick.AddListener(() =>
+            buttonForActivateSecondItem.GetComponent<Button>().onClick.AddListener(async () =>
             {
                 g.interactable = true;
                 g.blocksRaycasts = true;
@@ -48,6 +48,7 @@ namespace _Project.Scripts.Interactive
                 {
                     secondItem.DOFade(1f, 0.4f).SetEase(Ease.OutSine).SetDelay(0.176f).SetUpdate(true);
                 });
+                SoundManager.PSfx(Resources.Load<AudioClip>("UsableVFx/Fantasy_UI (44)"), 10);
             });
             wait = true;
         }

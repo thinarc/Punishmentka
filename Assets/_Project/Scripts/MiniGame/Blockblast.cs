@@ -50,16 +50,9 @@ namespace _Project.Scripts.MiniGame
                 var player = FindAnyObjectByType<PlayerMovement>();
                 player.disable = true;
                 player.SetTarget(new Vector2(0.41f, -0.56f));
-                SetOneshot();
                 await UniTask.Delay(2000);
                 player.SetTarget(new Vector2(0.14f, -0.52f));
                 await UniTask.Delay(200);
-            }
-            
-            async void SetOneshot()
-            {
-                await UniTask.Delay(1280);
-                SoundManager.PSfx(Resources.Load<AudioClip>("UsableVFx/desk/SkywardHero_UI (14)"), 2);
             }
             
             wait = true;
@@ -312,7 +305,10 @@ namespace _Project.Scripts.MiniGame
             }
 
             // взять первые addes
-            int count = Mathf.Min(Random.Range(4, 11), free.Count);
+            int count = Mathf.Min(Random.Range(4, 8), free.Count);
+            var predict = free.Count - count;
+            if (predict > 0 && predict < 7)
+                count = free.Count;
 
             for (int i = 0; i < count; i++)
             {

@@ -117,8 +117,8 @@ namespace _Project.Scripts.Player
             {
                 SoundManager.PSfx(footSounds[Random.Range(0, footSounds.Length)], Random.Range(3, 5));
                 footPlay = true;
-                if (transform.parent.name == "Player3") await UniTask.Delay(1000);
-                else await UniTask.Delay(840);
+                if (transform.parent.name == "Player3") await UniTask.Delay(840);
+                else await UniTask.Delay(540);
 
                 footPlay = false;
             }
