@@ -23,7 +23,7 @@ namespace _Project.Scripts
             {
                 sfxR[vol].pitch = Random.Range(0.94f, 1.24f);
                 sfxR[vol].panStereo = Random.Range(-0.8f, 0.8f);
-                sfxR[vol].volume = Random.Range(0.024f, 0.036f);
+                sfxR[vol].volume = Random.Range(0.024f, 0.04f);
             }
             sfxR[vol].PlayOneShot(clip);
         }
